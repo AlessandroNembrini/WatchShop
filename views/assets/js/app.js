@@ -10,7 +10,7 @@ require('./plugins/vue-particles');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-import JumbotronComponent from './components/JumbotronComponent.vue'
+//import JumbotronComponent from './components/JumbotronComponent.vue'
 
 
 // const files = require.context('./plugin', true, /\.vue$/i)
@@ -19,6 +19,6 @@ import JumbotronComponent from './components/JumbotronComponent.vue'
 const app = new Vue({
     el: '#app',
     components:{
-        JumbotronComponent
+        //JumbotronComponent
     },
 });
