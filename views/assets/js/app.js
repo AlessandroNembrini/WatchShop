@@ -1,6 +1,5 @@
 
 window.Vue = require('vue');
-require('./plugins/vue-particles');
 
 import NavBar from './components/NavBar.vue'
 

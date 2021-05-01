@@ -38,9 +38,6 @@ AppAsset::register($this);
             </div>
             <!-- Seiteninhalt END --> 
         </div>
-        <footer class="footer">
-           <p>FOOTER</p>
-        </footer>
     </div>
     <!-- Kompiliertes App.js einbinden (Vue-Komponenten)-->
     <script src="js/app.js"></script>

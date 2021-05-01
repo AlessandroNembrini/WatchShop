@@ -1,70 +1,16 @@
+@import "global.scss";
+/* Fonts */
+@import "font-faces.scss";
+/* Override Bootstrap varis */
 @import "vari.scss";
+/* Bootsttrap */
 @import "./bootstrap/bootstrap.scss";
+/* My Navbar Style */
 @import "navbar.scss";
 
-/* Design Fonts */
-@font-face {
-    font-family: "TradeGothicLT";
-    src: url("/views/assets/design/fonts/Trade\ Gothic\ LT.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
 body {
-    height: 100%;
+    height: 100vh;
 }
-
-/* HEADER STYLE */
-
-header{
-    width: 100%; 
-    background-color: #fff;
-    color: black;
-    position: fixed;
-    padding: 0 185px;
-    
-}
-
-.header-icons{
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    height: 20px;
-    width: 100%;
-    font-family: "TradeGothicLT";
-
-    
-}
-
-.header-icons-left{
-    display: inline-flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    width: 45px;
-}
-
-.herader-icons-right{
-    display: inline-flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    width: 45px;
-}
-
-.header-nav{
-    height: 50px;
-    width: 100%;
-    background-color: #fff;
-
-}
-
-.header-breadcrumbs{
-    background-color: #141414;
-    color: #fff;
-    height: 35px;
-    width: 100%;
-}
-
-/* HEADER STYLE END */
 
 
  /* MEDIA QUERIES */

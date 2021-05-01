@@ -1,0 +1,26 @@
+    //FONTS
+    //Font: Trade Gothic LT
+    @font-face {
+        // Defining what the font will be called
+        font-family: "TradeGothicLT";     
+        src: url("/design/fonts/Trade\ Gothic\ LT.ttf");
+      }
+
+      //Font: Trade Gothic LT Light
+    @font-face {
+        font-family: "TradeGothicLTLight";
+        src: url("/design/fonts/Trade\ Gothic\ LT\ Light.ttf");
+      }
+
+      //Font: Trade Gothic LT Bold
+    @font-face {
+        font-family: "TradeGothicLTBold";
+        font-weight: bolder;
+        src: url("/design/fonts/Trade\ Gothic\ LT\ Bold.ttf");
+      }
+
+      //Font: Minion Pro Regular
+    @font-face {
+        font-family: "MinionProRegular";
+        src: url("/design/fonts/Minion\ Pro\ Regular.ttf");
+      } 
