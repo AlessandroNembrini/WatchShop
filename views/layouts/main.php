@@ -27,14 +27,34 @@ AppAsset::register($this);
 
 <body>
     <?php $this->beginBody() ?>
-    <div id="app">
-        <header style="background-color: gray;">
-            <p>HEADER</p>
-        </header>
-        <div class="wrap">         
+    <header> 
+       <div class="header-icons">
+            <div class="header-icons-left">
+                <div><img src="<?php echo Yii::$app->request->baseUrl.'/views/assets/design/icons/Contact.png'?>" width="94" height="92" /></div>
+                
+                <div>2</div>
+                <div>3</div>
+            </div>  
+            <div class="herader-icons-right">
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+            </div>         
+       </div>
+       <div class="header-nav"></div>
+       <div class="header-breadcrumbs">
+        <p>Breadcrumbs / 1 / 2 / 3</p>
+       </div>
+    </header>
+    <!-- Id = app für Vue -->
+    <div id="app" class="page">        
+        <div class="wrap">  
+            <!-- Seiteninhalt -->       
             <div class="container">               
                 <?= $content ?>
             </div>
+            <!-- Seiteninhalt END --> 
         </div>
         <footer class="footer">
            <p>FOOTER</p>
