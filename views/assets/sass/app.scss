@@ -1,7 +1,99 @@
-/* Nutze BEM...*/
-.site{
+@import "vari.scss";
+@import "./bootstrap/bootstrap.scss";
+@import "navbar.scss";
 
-    &__test{
-        font-size: 29px;
-    }
+/* Design Fonts */
+@font-face {
+    font-family: "TradeGothicLT";
+    src: url("/views/assets/design/fonts/Trade\ Gothic\ LT.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    height: 100%;
 }
+
+/* HEADER STYLE */
+
+header{
+    width: 100%; 
+    background-color: #fff;
+    color: black;
+    position: fixed;
+    padding: 0 185px;
+    
+}
+
+.header-icons{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 20px;
+    width: 100%;
+    font-family: "TradeGothicLT";
+
+    
+}
+
+.header-icons-left{
+    display: inline-flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 45px;
+}
+
+.herader-icons-right{
+    display: inline-flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 45px;
+}
+
+.header-nav{
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+
+}
+
+.header-breadcrumbs{
+    background-color: #141414;
+    color: #fff;
+    height: 35px;
+    width: 100%;
+}
+
+/* HEADER STYLE END */
+
+
+ /* MEDIA QUERIES */
+ /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) 
+  {
+
+  } 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+{
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) 
+  {
+
+  } 
+
+/* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) 
+  {
+
+  } 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 
+{
+
+}  

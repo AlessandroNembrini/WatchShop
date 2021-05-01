@@ -59,5 +59,14 @@ Directory components vuejs to:
   web/                contains the entry script and Web resources
 ```
 
+SCSS Kompilieren (Hot reload => app.scss)
+```bash
+sass --watch views/assets/sass/app.scss web/css/site.css
+```
+
+Vue Kompilieren (Hot reload => app.js)
+```bash
+npm run watch
+```
 
 
