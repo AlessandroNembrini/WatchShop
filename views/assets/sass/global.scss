@@ -1,68 +1,9 @@
-/* MyDrawerWidth */
-
-#app {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 400;
-  color: #0ca3a3;
-}
-
-h1 {
-  color: teal;
-}
-
-a {
-  color: tomato;
-}
-
-.toggle {
-  width: 120px;
-  background: white;
-  color: tomato;
-  border: 0;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.close {
-  background: white;
-  border: 0;
-  cursor: pointer;
-}
-
-.right-drawer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0; /* initially */
-  overflow: hidden;
-  height: 100vh;
-  padding-left: 0; /* initially */
-  border-left: 1px solid whitesmoke;
-  background: white;
-  z-index: 200;
-  transition: all 0.2s;
-}
-
-.drawer-mask {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0; /* initially */
-  height: 100vh;
-  background: #000;
-  opacity: 0.3;
-  z-index: 199;
-  transition: opacity 0.2s;
-}
 
 /**************************************************/
+html{
+  margin: 10px;
+  margin-right: 15px;
+}
 
 a:link {
     text-decoration: none !important;

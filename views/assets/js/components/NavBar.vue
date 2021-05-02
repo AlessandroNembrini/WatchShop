@@ -1,5 +1,7 @@
 <template>
 <div>
+    <!-- Drawer (Responsive)-->
+    <drawer></drawer>
     <!-- NavBar -->
     <nav class="d-none myNavbar d-lg-flex flex-column justify-content-center"> 
         <!-- Navbar Icons-->
@@ -44,14 +46,16 @@
             </div>
         </div>        
     </nav>
-     <!-- NavBar Mobile -->
+     <!-- NavBar Mobile (Responsive) -->
     <nav class="myNavbar d-flex flex-column justify-content-center d-lg-none"> 
        <div class="d-flex w-100">
             <h2 class="myNavbar__items__brand"><a href="">The Brand</a></h2>
        </div>   
         <div class="d-flex w-100 justify-content-center myNavbar__breadcrumb">
             <div class="container d-flex">
-                <span class="myNavbar__breadcrumb__item">{{ watch.breadcrumb }}</span>
+                <!-- hidden mobile -->
+                <span class="myNavbar__breadcrumb__item d-none d-sm-block">{{ watch.breadcrumb }}</span>
+                <!-- shown mobile -->
                 <span style="color: white; padding: 10px 10px 10px 0px">Piaget Altiplano Ultimate 910P</span>
             </div>
         </div>        
@@ -60,7 +64,10 @@
 </template>
 
 <script>
+import Drawer from './Drawer.vue';
+
 export default {
+  components: { Drawer },
    data: () => {
        return {
         // Navigations-Elemente + Logo

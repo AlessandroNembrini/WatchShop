@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div style="text-align: right">
-      <button class="toggle" @click="drawerVisible = true">
+    <div class="text-right d-lg-none">
+      <button class="drawer__navbar" @click="drawerVisible = true">
         &#8942;&#8942;&#8942; Show Menu
       </button>
     </div>
     <div
-      class="right-drawer"
+      class="drawer__right"
       :style="{
-        width: drawerVisible ? '100%' : '0',
+        width: drawerVisible ? '80%' : '0',
         paddingLeft: drawerVisible ? '10px' : '0',
       }"
     >
-      <div style="text-align: right; margin: 5px">
-        <button class="close" @click="drawerVisible = false">&#9587;</button>
+      <div class="text-right mx-2 my-2">
+        <button class="drawer__close" @click="drawerVisible = false">&#9587;</button>
       </div>
       <h1>The Brand</h1>
       <h4>Watches</h4>
@@ -25,7 +25,7 @@
     </div>
     <!-- We will make the mask fill the screen while the menu is visible. Because its z-index is 1 less than that of the menu, the menu will still be displayed on top of it -->
     <div
-      class="drawer-mask"
+      class="drawer__mask"
       :style="{
         width: drawerVisible ? '100vw' : '0',
         opacity: drawerVisible ? '0.6' : '0',

@@ -30,8 +30,7 @@ AppAsset::register($this);
     <!-- Id = #app (von Vue Kontrolliert) -->
     <div id="app" class="page">  
     <!-- NavBar-Vue -->
-    <nav-bar></nav-bar>  
-    <drawer></drawer>    
+    <nav-bar></nav-bar>      
         <div class="wrap">  
             <!-- Seiteninhalt -->       
             <div class="container">               
