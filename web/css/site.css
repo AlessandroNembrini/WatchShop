@@ -10025,6 +10025,13 @@ h3 {
   margin: 0;
 }
 /* Drawer */
+.myHamburger {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+}
+
 .drawer__right {
   position: absolute;
   top: 0;
@@ -10070,6 +10077,11 @@ h3 {
   right: 15px;
   top: 13px;
 }
+.drawer__btn {
+  position: absolute;
+  right: 17px;
+  top: 10px;
+}
 
 /* Watch - Preview */
 /* Mobile */
@@ -10098,11 +10110,14 @@ h3 {
 }
 /* Watch - Details */
 /* Mobile */
+.watch__details {
+  text-align: center;
+}
 .watch__details__tag {
   color: #cda766;
   text-transform: uppercase;
   font-family: "TradeGothicLT";
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 600;
 }
 .watch__details__title {
@@ -10125,13 +10140,15 @@ h3 {
 .watch__details_description {
   color: #8c8c8c;
   font-family: "MinionProRegular";
-  font-size: 13px;
-  max-width: 540px;
+  font-size: 15px;
 }
 .watch__details__header {
   padding: 3%;
 }
 @media (min-width: 992px) {
+  .watch__details {
+    text-align: unset;
+  }
   .watch__details__title {
     font-size: 60px;
   }

@@ -4,7 +4,7 @@
       <div class="p-2"></div>
       <h2 class="watch__details__title">Piaget Altiplano<br/> Ultimate 910P</h2>
       <div class="p-1"></div>
-      <div class="pl-5">
+      <div class="pl-5 watch__details">
         <span class="watch__details__price">CHF 35'700.00</span>
         <div class="p-2"></div>
         <span class="watch__details__serialnumber">Watch G0A39111</span>

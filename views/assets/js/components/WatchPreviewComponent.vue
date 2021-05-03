@@ -5,7 +5,7 @@
             <img v-for="thumbnail in thumbnails" :key="thumbnail.id"
              @click="changePreviewImg(thumbnail.id)" 
              class="watch__preview__thumbnail border" 
-             :src="thumbnail.source" width="70" height="70" alt="">
+             :src="thumbnail.source" width="70" height="70" alt="thumbnail">
         </div>
         <!-- Preview -->
         <div class="col-lg-9 col-sm-12">

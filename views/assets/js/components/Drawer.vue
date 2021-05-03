@@ -1,9 +1,11 @@
 <template>
   <div>
     <div class="text-right d-lg-none">
-      <button class="drawer__navbar" @click="drawerVisible = true">
-        &#8942;&#8942;&#8942; Show Menu
-      </button>
+      <a class="drawer__btn" @click="drawerVisible = true">
+        <div class="myHamburger"></div>
+        <div class="myHamburger"></div>
+        <div class="myHamburger"></div>
+      </a>
     </div>
     <div
       class="drawer__right"

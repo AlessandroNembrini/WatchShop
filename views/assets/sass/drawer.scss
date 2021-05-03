@@ -1,3 +1,9 @@
+.myHamburger{
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+}
 .drawer{
     &__right{
         position: absolute;
@@ -44,6 +50,13 @@
       position: absolute;
       right: 15px;
       top: 13px;
+    }
+
+    &__btn{
+        position: absolute;
+        right: 17px;
+        top: 10px;
+        
     }
 
 

@@ -1,12 +1,13 @@
 /* Mobile */
 .watch{
+    
     &__details{
-        
+        text-align: center;
         &__tag{
             color: #cda766;
             text-transform: uppercase;
             font-family: "TradeGothicLT";
-            font-size: 7px;
+            font-size: 10px;
             font-weight: 600;
 
         }
@@ -35,8 +36,7 @@
         &_description{
             color: #8c8c8c;
             font-family: "MinionProRegular";
-            font-size: 13px;
-            max-width: 540px;
+            font-size: 15px;
         }
 
         &__header{
@@ -59,7 +59,7 @@
     // Desktop
     @media (min-width: 992px) {
         &__details{
-
+            text-align: unset;
             &__title{
                 font-size: 60px;
             }
