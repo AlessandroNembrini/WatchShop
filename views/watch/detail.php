@@ -13,7 +13,13 @@ $this->title = 'The Brand - Watch Details';
         <div style="margin: 100px 0;"></div>
 
         <section class="container border">
-            <h2 class="p-5">New Section</h2>
+            <product-attributes-component></product-attributes-component>
+        </section>
+
+        <div style="margin: 100px 0;"></div>
+
+        <section class="container border">
+            <h2 class="p-5">Another Section</h2>
         </section>
          
     </div>

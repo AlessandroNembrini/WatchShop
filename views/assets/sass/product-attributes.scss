@@ -1,0 +1,31 @@
+// Mobile
+.productAttributes{
+
+    &__image{
+        padding: 17rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+
+     // BREAKPOINTS
+    // Mobile
+    @media (min-width: 576px) {
+     
+    }
+
+    // Tablets
+    @media (min-width: 768px) {
+      
+    }
+    // Desktop
+    @media (min-width: 992px) {
+        
+    }
+    // Desktop large
+    @media (min-width: 1200px) {
+        
+    }
+}
