@@ -1,0 +1,47 @@
+/* Mobile */
+.watch{
+    margin: 60px 0px;
+
+    &__preview{
+        padding-top: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 0.25s;
+
+        &__thumbnail{
+            margin: 10px 10px;
+        }
+
+    }
+
+     // BREAKPOINTS
+    // Mobile
+    @media (min-width: 576px) {
+       
+      
+    }
+
+    // Tablets
+    @media (min-width: 768px) {
+        &__preview{
+            padding-top: 50%;
+        }
+    }
+    // Desktop
+    @media (min-width: 992px) {
+        &__preview{
+            padding-top: 100%;
+
+        }
+    
+       
+        }
+        
+    
+    // Desktop large
+    @media (min-width: 1200px) {
+        
+    }
+
+}

@@ -9980,7 +9980,6 @@ h3 {
 }
 /* My Navbar Style */
 .myNavbar {
-  position: fixed;
   box-sizing: border-box;
   width: 100%;
 }
@@ -10066,51 +10065,92 @@ h3 {
   z-index: 199;
   transition: opacity 0.2s;
 }
-
-.toggle {
-  width: 120px;
-  background: white;
-  color: tomato;
-  border: 0;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.close {
-  background: white;
-  border: 0;
-  cursor: pointer;
-}
-
-.right-drawer {
+.drawer__hamburger {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  /* initially */
-  overflow: hidden;
-  height: 100vh;
-  padding-left: 0;
-  /* initially */
-  border-left: 1px solid whitesmoke;
-  background: white;
-  z-index: 200;
-  transition: all 0.2s;
+  right: 15px;
+  top: 13px;
 }
 
-.drawer-mask {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  /* initially */
-  height: 100vh;
-  background: #000;
-  opacity: 0.3;
-  z-index: 199;
-  transition: opacity 0.2s;
+/* Watch - Preview */
+/* Mobile */
+.watch {
+  margin: 60px 0px;
 }
-
+.watch__preview {
+  padding-top: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.25s;
+}
+.watch__preview__thumbnail {
+  margin: 10px 10px;
+}
+@media (min-width: 768px) {
+  .watch__preview {
+    padding-top: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .watch__preview {
+    padding-top: 100%;
+  }
+}
+/* Watch - Details */
+/* Mobile */
+.watch__details__tag {
+  color: #cda766;
+  text-transform: uppercase;
+  font-family: "TradeGothicLT";
+  font-size: 7px;
+  font-weight: 600;
+}
+.watch__details__title {
+  font-size: 40px;
+  font-family: "MinionProRegular";
+  color: black;
+}
+.watch__details__price {
+  color: #cda766;
+  text-transform: uppercase;
+  font-family: "MinionProRegular";
+  font-size: 15px;
+  font-weight: 600;
+}
+.watch__details__serialnumber {
+  color: #8c8c8c;
+  font-family: "TradeGothicLT";
+  font-size: 10px;
+}
+.watch__details_description {
+  color: #8c8c8c;
+  font-family: "MinionProRegular";
+  font-size: 13px;
+  max-width: 540px;
+}
+.watch__details__header {
+  padding: 3%;
+}
+@media (min-width: 992px) {
+  .watch__details__title {
+    font-size: 60px;
+  }
+  .watch__details__tag {
+    font-size: 14px;
+  }
+  .watch__details__price {
+    font-size: 14px;
+  }
+  .watch__details__serialnumber {
+    font-size: 15px;
+  }
+  .watch__details_description {
+    font-size: 20px;
+  }
+  .watch__details__header {
+    padding: 3%;
+  }
+}
 body {
   height: 100vh;
 }

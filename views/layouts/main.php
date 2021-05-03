@@ -5,9 +5,6 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -30,17 +27,13 @@ AppAsset::register($this);
     <!-- Id = #app (von Vue Kontrolliert) -->
     <div id="app" class="page">  
     <!-- NavBar-Vue -->
-    <nav-bar></nav-bar>      
-        <div class="wrap">  
-            <!-- Seiteninhalt -->       
-            <div class="container">               
-                <?= $content ?>
-            </div>
-            <!-- Seiteninhalt END --> 
-        </div>
+    <nav-bar></nav-bar>    
+     <!-- Seiteninhalt -->       
+     <div>
+        <?= $content ?>
+     </div>
+        <!-- Seiteninhalt END --> 
     </div>
-    <!-- Kompiliertes App.js einbinden (Vue-Komponenten)-->
-    <script src="js/app.js"></script>
     <?php $this->endBody() ?>
 </body>
 

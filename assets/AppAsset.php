@@ -10,10 +10,8 @@ namespace app\assets;
 use yii\web\AssetBundle;
 
 /**
- * Main application asset bundle.
- *
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @since 2.0
+ * Hinzufügen von Bundles
+ * Add 'js/app.js' for accesing over all routes!
  */
 class AppAsset extends AssetBundle
 {
@@ -23,6 +21,7 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
+       'js/app.js' //!
     ];
     public $depends = [
         'yii\web\YiiAsset',
