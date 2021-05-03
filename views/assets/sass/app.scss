@@ -13,11 +13,30 @@
 @import "watch-preview.scss";
 /* Watch - Details */
 @import "watch-details.scss";
+/* Watch - Options */
+@import "options.scss";
 
 
 
-body {
-    height: 100vh;
+
+
+.myButton{
+  background-color: rgb(202, 162, 92);
+  border: none;
+  padding: 10px 10px;
+  
+  display: inline-block;
+  
+
+  &__ancor{
+    color: white !important;
+    font-weight: 300;
+    font-family: "TradeGothicLTBold";
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
 
 

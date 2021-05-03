@@ -7,18 +7,23 @@
             <div class="col-lg-6 col-sm-12 p-5 border">
                 <watch-details-component></watch-details-component>
             </div>
+        </div>
+        <div class="myOptions__spacer">
+            <options-component></options-component>    
         </div> 
     </div>
 </template>
 
 <script>
 import WatchDetailsComponent from './WatchDetailsComponent.vue';
-import WatchPreviewComponent from './WatchPreviewComponent.vue'
+import WatchPreviewComponent from './WatchPreviewComponent.vue';
+import OptionsComponent from './OptionsComponent.vue';
     
 export default {
     components: {
         WatchDetailsComponent,
-        WatchPreviewComponent
+        WatchPreviewComponent,
+        OptionsComponent
     }
 }
 </script>

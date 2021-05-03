@@ -11,12 +11,25 @@
       
        <div class="p-1"></div>
       <p class="watch__details_description">The thinnest hand-wound mechanical watches<br> in the world.Manufacture Piaget 910P ultra-thin,<br> hand-wound mechanical movement</p>
+      <button-component class="mt-2" :href="a" :text="b"></button-component>
     </div>
+
+    
   </div>
 </template>
 
 <script>
+import ButtonComponent from "./ButtonComponent.vue";
+
 export default {
-    
+    components: {
+      ButtonComponent
+    },
+    data: () => {
+      return{
+        a: "#",
+        b: "Add to shopping bag"
+      }
+    }
 }
 </script>

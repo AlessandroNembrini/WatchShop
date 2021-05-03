@@ -17,6 +17,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -29,10 +30,8 @@ AppAsset::register($this);
     <!-- NavBar-Vue -->
     <nav-bar></nav-bar>    
      <!-- Seiteninhalt -->       
-     <div>
-        <?= $content ?>
-     </div>
-        <!-- Seiteninhalt END --> 
+    <?= $content ?>
+     <!-- Seiteninhalt END --> 
     </div>
     <?php $this->endBody() ?>
 </body>

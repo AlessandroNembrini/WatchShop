@@ -1,0 +1,91 @@
+.myOptions{
+    width: 100%;
+    background-color: black;
+    font-family: "TradeGothicLTBold";
+    text-transform: uppercase;
+
+    &__spacer{
+        margin-top: 55px;
+    }
+
+    &__toggler{
+        background-color: white;
+        width: 100%;
+        padding: 15px;
+        font-size: 12px;
+        
+        
+    }
+
+    &__options{
+        width: 100%;
+        justify-content: space-evenly;
+
+    }
+
+    &__icon{
+        font-size: 15px; 
+        color: #8a8a8a;
+    }
+
+    &__option{
+        padding: 15px;
+        font-size: 12px;
+        color: white !important;
+        
+        
+    }
+
+    
+        // BREAKPOINTS
+        // Mobile
+        @media (min-width: 576px) {
+           
+            
+        }
+
+        // Tablets
+        @media (min-width: 768px) {
+        
+        }
+
+        // Desktop
+        @media (min-width: 992px) {
+            
+        }
+        // Desktop large
+        @media (min-width: 1200px) {
+            .myOptions{
+                width: 100%;
+
+            
+                &__spacer{
+                    margin-top: 55px;
+                }
+            
+                &__toggler{
+                    width: 40%;
+                    padding: 15px;
+                    font-size: 12px;
+                    
+                    
+                }
+            
+                &__options{
+                    width: 60%;
+                    justify-content: space-evenly;
+            
+                }
+            
+                &__option{
+                    padding: 15px;
+                    font-size: 12px;           
+                    
+                }
+            }
+
+          
+        }
+    }
+
+

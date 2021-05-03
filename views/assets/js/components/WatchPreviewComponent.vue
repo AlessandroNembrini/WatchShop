@@ -41,7 +41,7 @@ export default {
                     source: "/design/images/Product_Thumbnail_3.png",
                     previewImg: {
                         id: 1,
-                        source: "/design/images/Product_Main_3.jpg"
+                        source: "/design/images/Product_Main_3.png"
                     }
                 }
             ],

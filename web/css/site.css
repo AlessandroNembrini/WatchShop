@@ -10110,9 +10110,6 @@ h3 {
 }
 /* Watch - Details */
 /* Mobile */
-.watch__details {
-  text-align: center;
-}
 .watch__details__tag {
   color: #cda766;
   text-transform: uppercase;
@@ -10168,8 +10165,71 @@ h3 {
     padding: 3%;
   }
 }
-body {
-  height: 100vh;
+/* Watch - Options */
+.myOptions {
+  width: 100%;
+  background-color: black;
+  font-family: "TradeGothicLTBold";
+  text-transform: uppercase;
+}
+.myOptions__spacer {
+  margin-top: 55px;
+}
+.myOptions__toggler {
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+  font-size: 12px;
+}
+.myOptions__options {
+  width: 100%;
+  justify-content: space-evenly;
+}
+.myOptions__icon {
+  font-size: 15px;
+  color: #8a8a8a;
+}
+.myOptions__option {
+  padding: 15px;
+  font-size: 12px;
+  color: white !important;
+}
+@media (min-width: 1200px) {
+  .myOptions .myOptions {
+    width: 100%;
+  }
+  .myOptions .myOptions__spacer {
+    margin-top: 55px;
+  }
+  .myOptions .myOptions__toggler {
+    width: 40%;
+    padding: 15px;
+    font-size: 12px;
+  }
+  .myOptions .myOptions__options {
+    width: 60%;
+    justify-content: space-evenly;
+  }
+  .myOptions .myOptions__option {
+    padding: 15px;
+    font-size: 12px;
+  }
+}
+
+.myButton {
+  background-color: #caa25c;
+  border: none;
+  padding: 10px 10px;
+  display: inline-block;
+}
+.myButton__ancor {
+  color: white !important;
+  font-weight: 300;
+  font-family: "TradeGothicLTBold";
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* MEDIA QUERIES */
