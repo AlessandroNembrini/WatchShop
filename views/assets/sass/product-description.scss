@@ -1,0 +1,117 @@
+.productDescription{
+    &__img1{
+        padding: 12rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__img2{
+        padding: 10rem;
+        background-position: center;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: -10rem;     
+        left: 7rem; 
+    }
+
+    &__textbox{
+        margin-top: 10rem;
+    }
+
+    &__text1{
+        font-size: 17px;
+    }
+
+    &__text2{
+        font-size: 15px;
+    }
+    
+
+    // BREAKPOINTS
+    // // Mobile
+    // @media (min-width: 576px) {
+     
+    // }
+
+    // Tablets
+    @media (min-width: 768px) {
+        &__img1{
+            padding: 19rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    
+        &__img2{
+            padding: 16rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+    
+            position: absolute;
+            bottom: -15rem;     
+            left: 12rem; 
+        }
+
+        &__textbox{
+            margin-top: 0rem;
+        }
+    
+        &__text1{
+            color: #8c8c8c;
+            font-family: "MinionProRegular";
+            font-size: 17px;
+        }
+    
+        &__text2{
+            color: #8c8c8c;
+            font-family: "TradeGothicLT";
+            font-size: 15px;
+        }
+      
+    }
+    // Desktop
+    @media (min-width: 992px) {
+        
+    }
+    // Desktop large
+    @media (min-width: 1200px) {
+        &__img1{
+            padding: 19rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    
+        &__img2{
+            padding: 16rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+    
+            position: absolute;
+            bottom: -15rem;     
+            left: 12rem; 
+        }
+
+        &__textbox{
+            margin-top: 0rem;
+        }
+    
+        &__text1{
+            color: #8c8c8c;
+            font-family: "MinionProRegular";
+            font-size: 17px;
+        }
+    
+        &__text2{
+            color: #8c8c8c;
+            font-family: "TradeGothicLT";
+            font-size: 15px;
+        }
+    
+        
+    }
+}

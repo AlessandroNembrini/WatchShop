@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="z-index: 10000">
     <div class="text-right d-lg-none">
       <a class="drawer__btn" @click="drawerVisible = true">
         <div class="myHamburger"></div>

@@ -1,5 +1,5 @@
 const store = {
-    vari: "From Store :)"
+    vari: "Global over components :)"
 }
 
 export default store;

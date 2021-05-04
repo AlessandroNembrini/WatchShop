@@ -1,10 +1,10 @@
 <template>
     <div class="container">
         <div class="row flex-wrap-reverse pt-5">
-            <div class="col-lg-6 col-sm-12 border">          
+            <div class="col-lg-6 col-sm-12">          
                 <watch-preview-component></watch-preview-component>
              </div>
-            <div class="col-lg-6 col-sm-12 p-5 border">
+            <div class="col-lg-6 col-sm-12 p-5">
                 <watch-details-component></watch-details-component>
             </div>
         </div>

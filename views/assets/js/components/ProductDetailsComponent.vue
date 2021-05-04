@@ -1,7 +1,7 @@
 <template>
-    <div class="d-flex justify-content-lg-between justify-content-center flex-wrap border">
+    <div class="d-flex justify-content-lg-between justify-content-center flex-wrap">
         <!-- Atributes and Title -->
-        <div class="border productAttributes__content">
+        <div class="productAttributes__content">
             <div></div>
             <span class="watch__details__tag">Product Details</span><br>
             <div class="my-3"></div>
@@ -24,7 +24,7 @@
             </div>                                 
         </div>
         <!-- Image (Item 2) -->
-        <div class="border mt-0 mt-5 mt-md-0">
+        <div class="mt-0 mt-5 mt-md-0">
             <div class="productAttributes__image" v-bind:style="{ backgroundImage: 'url(' + img + ')' }"></div>
         </div>
     </div>

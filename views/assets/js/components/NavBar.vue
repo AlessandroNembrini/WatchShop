@@ -3,7 +3,7 @@
     <!-- Drawer (Responsive)-->
     <drawer></drawer>
     <!-- NavBar -->
-    <nav class="d-none myNavbar d-lg-flex flex-column justify-content-center"> 
+    <nav class="d-none myNavbar d-lg-flex flex-column justify-content-center shadow-lg"> 
         <!-- Navbar Icons-->
        <div class="myNavbar__icons w-100">
            <div class="container d-flex align-items-baseline justify-content-between">
@@ -47,7 +47,7 @@
         </div>        
     </nav>
      <!-- NavBar Mobile (Responsive) -->
-    <nav class="myNavbar d-flex flex-column justify-content-center d-lg-none"> 
+    <nav class="myNavbar d-flex flex-column justify-content-center d-lg-none p-2"> 
        <div class="d-flex w-100">
             <h2 class="myNavbar__items__brand"><a href="">The Brand</a></h2>
        </div>   

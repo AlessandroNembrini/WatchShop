@@ -9,7 +9,7 @@
         </div>
         <!-- Preview -->
         <div class="col-lg-9 col-sm-12">
-             <div class="watch__preview border" 
+             <div class="watch__preview" 
              :style="{ backgroundImage: 'url(' + previewImg.source + ')' }"></div>
         </div>
     </div>
