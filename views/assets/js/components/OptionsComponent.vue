@@ -3,7 +3,7 @@
         <!-- Toggler White -->
        <div class="myOptions__toggler d-flex justify-content-center">
         <div>
-            <a href="#">
+            <a @click="toggleDetails()">
                 <i style="font-size: 15px; color: #caa25c;" class="fas fa-long-arrow-alt-down pr-3">
                 </i>Show product details
             </a>
@@ -29,6 +29,16 @@
 
 <script>
 export default {
-    
+    methods: {
+        toggleDetails(){
+            var x = document.getElementById("product-details-section");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } 
+            else {
+                x.style.display = "none";
+            }
+        }
+    }
 }
 </script>

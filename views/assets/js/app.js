@@ -3,7 +3,7 @@ window.Vue = require('vue');
 
 import NavBar from './components/NavBar.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
-import ProductAttributesComponent from './components/ProductAttributesComponent.vue';
+import ProductDetailsComponent from './components/ProductDetailsComponent.vue';
 
 
 const app = new Vue({
@@ -11,6 +11,6 @@ const app = new Vue({
     components:{
         NavBar,
         HeaderComponent,
-        ProductAttributesComponent
+        ProductDetailsComponent
     },
 });

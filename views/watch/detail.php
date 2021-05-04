@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+
 $this->title = 'The Brand - Watch Details';
 ?>
 
@@ -12,14 +13,14 @@ $this->title = 'The Brand - Watch Details';
 
         <div style="margin: 100px 0;"></div>
 
-        <section class="container border">
-            <product-attributes-component></product-attributes-component>
+        <section id="product-details-section" class="container p-5 border">
+            <product-details-component></product-details-component>
         </section>
 
         <div style="margin: 100px 0;"></div>
 
-        <section class="container border">
-            <h2 class="p-5">Another Section</h2>
+        <section class="container p-5 border">
+            <h2>Another Section</h2>
         </section>
          
     </div>
