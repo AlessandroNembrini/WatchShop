@@ -10255,7 +10255,7 @@ h3 {
 }
 .productAttributes__image {
   width: 100%;
-  padding: 12rem;
+  padding: 13rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -10309,6 +10309,26 @@ h3 {
   background-size: contain;
   bottom: -10rem;
   left: 5.1rem;
+}
+@media (min-width: 576px) {
+  .productAttributes__specifications__image1 {
+    padding: 14rem;
+  }
+  .productAttributes__specifications__image2 {
+    padding: 9rem;
+    bottom: 0rem;
+    left: 5.1rem;
+  }
+}
+@media (min-width: 768px) {
+  .productAttributes__specifications__image1 {
+    padding: 14rem;
+  }
+  .productAttributes__specifications__image2 {
+    padding: 9rem;
+    bottom: 0rem;
+    left: 5.1rem;
+  }
 }
 @media (min-width: 1200px) {
   .productAttributes {
@@ -10436,6 +10456,156 @@ h3 {
   }
 }
 
+/* Related - Pieces */
+.mySwiper__title {
+  font-size: 40px;
+  color: #fff;
+  font-family: "MinionProRegular";
+  padding-top: 20px;
+  margin-bottom: 5rem;
+}
+.mySwiper__roundedBtn {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  position: relative;
+  display: none;
+}
+.mySwiper__roundedBtn__icon {
+  color: #caa25c;
+  font-size: 50px;
+  position: absolute;
+  top: 23px;
+  left: 27px;
+}
+.mySwiper__images__image {
+  padding-top: 160%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.mySwiper__description__tag {
+  font-size: 13px;
+  font-family: "TradeGothicLTBold";
+  color: #8c8c8c;
+  text-transform: uppercase;
+}
+.mySwiper__description__name {
+  font-size: 25px;
+  font-family: "MinionProRegular";
+  color: #fff;
+}
+.mySwiper__description__serialnumber {
+  font-size: 13px;
+  font-family: "TradeGothicLT";
+  color: #8c8c8c;
+}
+.mySwiper__description__price {
+  font-size: 15px;
+  font-family: "MinionProRegular";
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .mySwiper__roundedBtn {
+    height: 10rem;
+    width: 10rem;
+    display: none;
+  }
+  .mySwiper__roundedBtn__icon {
+    color: #caa25c;
+    font-size: 50px;
+    position: absolute;
+    top: 23px;
+    left: 27px;
+  }
+}
+@media (min-width: 992px) {
+  .mySwiper__roundedBtn {
+    height: 10rem;
+    width: 10rem;
+    display: block;
+  }
+  .mySwiper__roundedBtn__icon {
+    color: #caa25c;
+    font-size: 50px;
+    position: absolute;
+    top: 23px;
+    left: 27px;
+  }
+}
+@media (min-width: 1200px) {
+  .mySwiper__images__image {
+    padding-top: 160%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .mySwiper__roundedBtn {
+    height: 10rem;
+    width: 10rem;
+    display: block;
+  }
+  .mySwiper__roundedBtn__icon {
+    color: #caa25c;
+    font-size: 50px;
+    position: absolute;
+    top: 23px;
+    left: 27px;
+  }
+  .mySwiper__description__tag {
+    font-size: 13px;
+  }
+  .mySwiper__description__name {
+    font-size: 35px;
+  }
+  .mySwiper__description__serialnumber {
+    font-size: 13px;
+  }
+  .mySwiper__description__price {
+    font-size: 15px;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section {
+  background-color: #0f0f0f;
+  padding: 5rem;
+}
+
 .myButton {
   background-color: #caa25c;
   border: none;
@@ -10458,5 +10628,11 @@ h3 {
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .section {
+    background-color: #0f0f0f;
+    padding: 10rem;
+  }
+}
 
 /*# sourceMappingURL=site.css.map */

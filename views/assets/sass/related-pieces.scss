@@ -1,0 +1,170 @@
+
+.mySwiper{
+
+    &__title{
+        font-size: 40px;
+        color: #fff;
+        font-family: "MinionProRegular";
+        padding-top: 20px;
+        margin-bottom: 5rem;
+    }
+
+    &__roundedBtn{
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        border: 1px solid lightgray;
+        position: relative;
+        display: none;
+
+        &__icon{
+            color: #caa25c; 
+            font-size: 50px; 
+            position: absolute;
+            top: 23px;
+            left: 27px;
+           
+        }
+    }
+
+    &__images{
+
+        &__image{
+            padding-top: 160%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__description {
+
+        &__tag{
+            font-size: 13px;
+            font-family: "TradeGothicLTBold";
+            color: #8c8c8c;
+            text-transform: uppercase;
+        }
+    
+        &__name{
+            font-size: 25px;
+            font-family: "MinionProRegular";
+            color: #fff;
+        }
+
+        &__serialnumber{
+            font-size: 13px;
+            font-family: "TradeGothicLT";
+            color: #8c8c8c;
+        }
+
+        &__price{
+            font-size: 15px;
+            font-family: "MinionProRegular";
+            color: #fff;
+        }
+
+    
+
+  
+
+    }
+
+
+
+     // BREAKPOINTS
+    // Mobile
+    @media (min-width: 576px) {
+     
+    }
+
+    // Tablets
+    @media (min-width: 768px) {
+        &__roundedBtn{
+            height: 10rem;
+            width: 10rem;
+            display: none;
+    
+            &__icon{
+                color: #caa25c; 
+                font-size: 50px; 
+                position: absolute;
+                top: 23px;
+                left: 27px;
+               
+            }
+        }
+      
+    }
+
+    // Desktop
+    @media (min-width: 992px) {
+        &__roundedBtn{
+            height: 10rem;
+            width: 10rem;
+            display: block;
+    
+            &__icon{
+                color: #caa25c; 
+                font-size: 50px; 
+                position: absolute;
+                top: 23px;
+                left: 27px;
+               
+            }
+        }
+        
+    }
+
+    // Desktop large
+    @media (min-width: 1200px) {
+        &__images{
+
+            &__image{
+                padding-top: 160%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__roundedBtn{
+            height: 10rem;
+            width: 10rem;
+            display: block;
+    
+            &__icon{
+                color: #caa25c; 
+                font-size: 50px; 
+                position: absolute;
+                top: 23px;
+                left: 27px;
+               
+            }
+        }
+    
+        &__description {
+    
+            &__tag{
+                font-size: 13px;
+            }
+        
+            &__name{
+                font-size: 35px;
+            }
+    
+            &__serialnumber{
+                font-size: 13px;
+            }
+    
+            &__price{
+                font-size: 15px;
+            }
+        }
+
+    }
+}

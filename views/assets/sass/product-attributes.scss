@@ -4,7 +4,7 @@
 
     &__image{
         width: 100%;
-        padding: 12rem;
+        padding: 13rem;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -77,11 +77,34 @@
      // BREAKPOINTS
     // Mobile
     @media (min-width: 576px) {
-     
+        &__specifications{
+            &__image1{
+                padding: 14rem;
+            }
+    
+            &__image2{
+                padding: 9rem;
+                bottom: -0rem;
+                left: 5.1rem;
+    
+            }
+        }
     }
 
     // Tablets
     @media (min-width: 768px) {
+        &__specifications{
+            &__image1{
+                padding: 14rem;
+            }
+    
+            &__image2{
+                padding: 9rem;
+                bottom: -0rem;
+                left: 5.1rem;
+    
+            }
+        }
       
     }
     // Desktop

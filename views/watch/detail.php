@@ -27,10 +27,10 @@ $this->title = 'The Brand - Watch Details';
             <product-specifications-component></product-specifications-component>
         </section>
 
-        <div class="page-spacer1"></div>
+        <div style="margin: 200px 0;"></div>
 
-        <section>
-            
+        <section class="section">
+            <related-pieces-component></related-pieces-component>
         </section>
          
     </div>

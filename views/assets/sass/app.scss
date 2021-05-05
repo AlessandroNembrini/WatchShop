@@ -19,7 +19,45 @@
 @import "product-attributes.scss";
 /* Product - Description */
 @import "product-description.scss";
+/* Related - Pieces */
+@import "related-pieces.scss";
 
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section{
+  background-color: #0f0f0f; 
+  padding: 5rem
+}
 
 .myButton{
   background-color: rgb(202, 162, 92);
@@ -69,5 +107,8 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) 
 {
-
+  .section{
+    background-color: #0f0f0f; 
+    padding: 10rem
+  }
 }  

@@ -61,6 +61,7 @@ class WatchController extends Controller
      */
     public function actionDetail()
     {
+        
         return $this->render('detail');
     }
 }

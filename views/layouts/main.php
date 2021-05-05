@@ -18,6 +18,8 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+     <!-- Link Swiper's CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -34,6 +36,49 @@ AppAsset::register($this);
      <!-- Seiteninhalt END --> 
     </div>
     <?php $this->endBody() ?>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        breakpoints: {
+           // when window width is >= 320px
+           220: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          }
+        },
+        navigation: {
+          nextEl: '.mySwiper__roundedBtn',
+         // prevEl: '.mySwiper__roundedBtn',
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        
+      });
+    </script>
 </body>
 
 </html>

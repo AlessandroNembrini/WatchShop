@@ -6,6 +6,8 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import ProductDetailsComponent from './components/ProductDetailsComponent.vue';
 import ProductDescriptionComponent from './components/ProductDescriptionComponent.vue';
 import ProductSpecificationsComponent from './components/ProductSpecificationsComponent.vue';
+import RelatedPiecesComponent from './components/RelatedPiecesComponent.vue';
+import Swiper from 'vue2-swiper'
 
 
 
@@ -16,6 +18,8 @@ const app = new Vue({
         HeaderComponent,
         ProductDetailsComponent,
         ProductDescriptionComponent,
-        ProductSpecificationsComponent
+        ProductSpecificationsComponent,
+        RelatedPiecesComponent,
+        Swiper
     },
 });
