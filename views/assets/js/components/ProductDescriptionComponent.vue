@@ -1,7 +1,7 @@
 <template>
-    <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center w-100">
+    <div class="d-flex flex-wrap-reverse flex-lg-nowrap justify-content-center w-100">
         <!-- Image -->
-        <div style="position: relative">
+        <div style="position: relative; margin-top: 5rem">
             <div class="productDescription__img1" :style="{ backgroundImage: 'url(' + img + ')' }"></div>
             <div class="productDescription__img2" :style="{ backgroundImage: 'url(' + img2 + ')' }"></div>
         </div>

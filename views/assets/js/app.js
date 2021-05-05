@@ -5,6 +5,7 @@ import NavBar from './components/NavBar.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import ProductDetailsComponent from './components/ProductDetailsComponent.vue';
 import ProductDescriptionComponent from './components/ProductDescriptionComponent.vue';
+import ProductSpecificationsComponent from './components/ProductSpecificationsComponent.vue';
 
 
 
@@ -14,6 +15,7 @@ const app = new Vue({
         NavBar,
         HeaderComponent,
         ProductDetailsComponent,
-        ProductDescriptionComponent
+        ProductDescriptionComponent,
+        ProductSpecificationsComponent
     },
 });

@@ -5,6 +5,20 @@ html{
   margin-right: 15px;
 }
 
+.section1{
+  background-color: rgb(240, 240, 240); 
+  padding-top: 50px;
+}
+
+.page-spacer1{
+  margin: 45px 0;
+
+}
+
+.page-spacer2{
+
+}
+
 a:link {
     text-decoration: none !important;
   }
@@ -30,3 +44,37 @@ a:link {
       content: none !important;
     }
   }
+
+       // BREAKPOINTS
+    // Mobile
+    @media (min-width: 576px) {
+     
+    }
+
+    // Tablets
+    @media (min-width: 768px) {
+      
+    }
+    // Desktop
+    @media (min-width: 992px) {
+      .section1{
+        padding-top: 100px;
+      }
+        
+    }
+    // Desktop large
+    @media (min-width: 1200px) {
+        .section1{
+          padding-top: 150px;
+        }
+        
+        .page-spacer1{
+          margin: 100px 0;  
+        }
+        
+        .page-spacer2{
+        
+        }
+        
+          
+      }

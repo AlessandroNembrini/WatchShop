@@ -50,6 +50,28 @@
         border-top: solid 3px gray;
     }
 
+    &__specifications{
+        position: relative;
+
+        &__image1{
+            padding: 14rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &__image2{
+            position: absolute;
+            padding: 9rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: -10rem;
+            left: 5.1rem;
+
+        }
+    }
+
 
 
      // BREAKPOINTS
@@ -90,6 +112,28 @@
 
         &__content{
             padding: 0 7rem;
+        }
+
+        &__specifications{
+            position: relative;
+
+            &__image1{
+                padding: 20rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            &__image2{
+                position: absolute;
+                padding: 14rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                bottom: -15rem;
+                left: 6rem;
+
+            }
         }
         
     }
