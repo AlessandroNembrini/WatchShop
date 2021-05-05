@@ -1,0 +1,58 @@
+.myFooter{
+
+    &__brand{
+        font-family: "MinionProRegular";
+        font-size: 24px;
+        color: #0a0a0a;
+        text-transform: uppercase;
+    }
+
+    &__address{
+        font-size: 15px;
+
+        &__icon{
+            font-size: 15px;
+            font-family: "TradeGothicLTBold";
+        }
+
+        &__text{
+            font-size: 15px;
+        }
+    }
+
+    &__socials{
+
+        &__box{
+            height: 35px; 
+            width: 35px;
+            background-color: #dddddd; 
+            margin: 0 5px;
+            position: relative;
+        }
+
+        &__icon{
+            font-size: 15px;
+            position: absolute;
+            top: 7px;
+            left: 11px;
+        }
+    }
+
+    &__items{
+
+        &__tag{
+            font-family: "TradeGothicLTBold";
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        &__link{
+            font-size: 14px;
+            font-family: "TradeGothicLT";
+            line-height: 25px;
+        }
+    }
+
+
+
+}

@@ -7,7 +7,7 @@ import ProductDetailsComponent from './components/ProductDetailsComponent.vue';
 import ProductDescriptionComponent from './components/ProductDescriptionComponent.vue';
 import ProductSpecificationsComponent from './components/ProductSpecificationsComponent.vue';
 import RelatedPiecesComponent from './components/RelatedPiecesComponent.vue';
-import Swiper from 'vue2-swiper'
+import FooterComponent from './components/FooterComponent.vue';
 
 
 
@@ -20,6 +20,6 @@ const app = new Vue({
         ProductDescriptionComponent,
         ProductSpecificationsComponent,
         RelatedPiecesComponent,
-        Swiper
+        FooterComponent
     },
 });

@@ -10571,6 +10571,47 @@ h3 {
   }
 }
 
+/* Footer */
+.myFooter__brand {
+  font-family: "MinionProRegular";
+  font-size: 24px;
+  color: #0a0a0a;
+  text-transform: uppercase;
+}
+.myFooter__address {
+  font-size: 15px;
+}
+.myFooter__address__icon {
+  font-size: 15px;
+  font-family: "TradeGothicLTBold";
+}
+.myFooter__address__text {
+  font-size: 15px;
+}
+.myFooter__socials__box {
+  height: 35px;
+  width: 35px;
+  background-color: #dddddd;
+  margin: 0 5px;
+  position: relative;
+}
+.myFooter__socials__icon {
+  font-size: 15px;
+  position: absolute;
+  top: 7px;
+  left: 11px;
+}
+.myFooter__items__tag {
+  font-family: "TradeGothicLTBold";
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.myFooter__items__link {
+  font-size: 14px;
+  font-family: "TradeGothicLT";
+  line-height: 25px;
+}
+
 .swiper-container {
   width: 100%;
   height: 100%;

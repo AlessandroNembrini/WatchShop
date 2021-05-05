@@ -6,27 +6,27 @@
     <nav class="d-none myNavbar d-lg-flex flex-column justify-content-center shadow-lg"> 
         <!-- Navbar Icons-->
        <div class="myNavbar__icons w-100">
-           <div class="container d-flex align-items-baseline justify-content-between">
+           <div class="container d-flex align-items-baseline justify-content-between pt-3">
                 <!-- Navbar Left Icons-->
                 <div class="myNavbar__icons__left d-flex flex-row justify-content-between">
-                    <div v-for="leftIcon in navIconsLeft" :key="leftIcon.id" class="pr-4">
-                        <a :href="leftIcon.href"><img :src="leftIcon.source" width="20" height="18" /></a>
+                    <div v-for="leftIcon in navIconsLeft" :key="leftIcon.id" class="pr-5">
+                        <a :href="leftIcon.href"><img :src="leftIcon.source" :width="leftIcon.width" :height="leftIcon.height" /></a>
                     </div>                               
                 </div>  
                 <!-- Navbar Right Icons -->
                 <div class="myNavbar__icons__right d-flex flex-row justify-content-between">
-                    <div v-for="rightIcon in navIconsRight" :key="rightIcon.id" class="pr-4">
-                        <a :href="rightIcon.href"><img :src="rightIcon.source" width="20" height="18" /></a>
+                    <div v-for="rightIcon in navIconsRight" :key="rightIcon.id" class="pl-5">
+                        <a :href="rightIcon.href"><img :src="rightIcon.source" :width="rightIcon.width" :height="rightIcon.width" /></a>
                     </div>                 
                 </div>         
            </div>
        </div>
        <div class="d-flex w-100 justify-content-center">
            <ul class="myNavbar__items container flex-wrap 
-            justify-content-between text-center d-inline-flex align-items-center"
+            justify-content-between text-center d-inline-flex align-items-center mt-4"
             >
                 <li v-for="leftItem in navItemsLeft" :key="leftItem.id" 
-                    class="myNavbar__items__item list-unstyled pr-4 ">
+                    class="myNavbar__items__item list-unstyled">
                     <a :href="leftItem.href">{{ leftItem.name }}</a>
                 </li>
                 <!-- Branding-->
@@ -34,7 +34,7 @@
                     <h2 class="myNavbar__items__brand"><a href="#">The Brand</a></h2>
                 </li>
                 <li v-for="rightItem in navItemsRight" :key="rightItem.id" 
-                    class="list-unstyled myNavbar__items__item pr-4">
+                    class="list-unstyled myNavbar__items__item">
                     <a :href="rightItem.href">{{ rightItem.name }}</a>
                 </li>
         </ul>
@@ -121,22 +121,22 @@ export default {
             {
                 id: 1,
                 source: "/design/icons/Contact.png",
-                width: "",
-                height: "",
+                width: "17",
+                height: "15",
                 href: "#"
             },
             {
                 id: 2,
                 source: "/design/icons/Stores.png",
-                width: "",
-                height: "",
+                width: "15",
+                height: "15",
                 href: "#"
             },
             {
                 id: 3,
                 source: "/design/icons/Language.png",
-                width: "",
-                height: "",
+                width: "15",
+                height: "15",
                 href: "#"
             },
         ],
@@ -145,29 +145,29 @@ export default {
             {
                 id: 4,
                 source: "/design/icons/Bag.png",
-                width: "",
-                height: "",
+                width: "15",
+                height: "15",
                 href: "#"
             },
             {
                 id: 5,
                 source: "/design/icons/Wishlist.png",
-                width: "",
-                height: "",
+                width: "15",
+                height: "15",
                 href: "#"
             },
             {
                 id: 6,
                 source: "/design/icons/Login.png",
-                width: "",
-                height: "",
+                width: "15",
+                height: "15",
                 href: "#"
             },
             {
                 id: 7,
                 source: "/design/icons/Search.png",
-                width: "",
-                height: "",
+                width: "15",
+                height: "15",
                 href: "#"
             }
         ],

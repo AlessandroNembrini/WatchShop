@@ -34,6 +34,7 @@ AppAsset::register($this);
      <!-- Seiteninhalt -->       
     <?= $content ?>
      <!-- Seiteninhalt END --> 
+     <footer-component></footer-component>
     </div>
     <?php $this->endBody() ?>
 
