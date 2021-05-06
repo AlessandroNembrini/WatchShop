@@ -11,7 +11,7 @@ AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html class="mt-0" lang="<?= Yii::$app->language ?>">
+<html class="m-0 p-0" lang="<?= Yii::$app->language ?>">
 
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
