@@ -8,10 +8,13 @@ $this->title = 'The Brand - Watch Details';
 <div class="site-index">
     <div class="body-content mx-3">
         <section class="section1">
-            <header-component></header-component> 
+            <header-component :mydata="response"></header-component> 
         </section>
 
-        <div class="page-spacer1"></div>
+        <!-- <div class="page-spacer1">
+         <p> /*json_encode($model) /*?></p>
+        </div> -->
+
 
         <section id="product-details-section" class="container p-5">
             <product-details-component></product-details-component>
@@ -35,3 +38,9 @@ $this->title = 'The Brand - Watch Details';
          
     </div>
 </div>
+
+
+
+
+
+

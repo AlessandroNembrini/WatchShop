@@ -54,4 +54,34 @@ class Watch extends \yii\db\ActiveRecord
             'fk_header' => 'Fk Header',
         ];
     }
+
+
+    /**
+     * @return ActiveQuery
+     */
+    public function getHeader()
+    {
+        return $this->hasOne(Header::class, ['id' => 'fk_header'])->with('preview');
+    }
+
+
+    public function getPageModel($watchId)
+    {
+        $watchHeaders = Watch::find()
+        ->where(['watch.id' => $watchId])
+        ->with('header') //include heder relation
+        ->asArray() // stream array
+        ->one(); // single
+
+        return $watchHeaders;
+    }
+
+    public function getWatchById($id)
+    {
+        $watch = Watch::find()
+        ->where(['id' => $id])
+        ->one();
+
+        return $watch;
+    }
 }

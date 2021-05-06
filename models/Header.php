@@ -36,6 +36,8 @@ class Header extends \yii\db\ActiveRecord
         ];
     }
 
+
+
     /**
      * {@inheritdoc}
      */
@@ -49,4 +51,19 @@ class Header extends \yii\db\ActiveRecord
             'fk_preview' => 'Fk Preview',
         ];
     }
+
+    /**
+     * eager load preview for Watch Model
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPreview()
+    {
+        return $this->hasOne(Preview::className(), ['id' => 'fk_preview'])->with('images'); 
+    }
+
+    
+
+
+
+   
 }

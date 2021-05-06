@@ -46,4 +46,6 @@ class Images extends \yii\db\ActiveRecord
             'fk_preview' => 'Fk Preview',
         ];
     }
+    
+
 }

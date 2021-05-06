@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <h1>{{ mydata }}</h1>
         <div class="row flex-wrap-reverse pt-5">
             <div class="col-lg-6 col-sm-12">          
                 <watch-preview-component></watch-preview-component>
@@ -24,6 +25,9 @@ export default {
         WatchDetailsComponent,
         WatchPreviewComponent,
         OptionsComponent
-    }
+    },
+
+    props: ["mydata"]
 }
+
 </script>

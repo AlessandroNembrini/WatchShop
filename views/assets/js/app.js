@@ -22,4 +22,12 @@ const app = new Vue({
         RelatedPiecesComponent,
         FooterComponent
     },
+
+
+    data: () => {
+        return {
+            //response is loaded from main.php header script
+            response: response, 
+        }
+    }
 });

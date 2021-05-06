@@ -41,4 +41,13 @@ class Preview extends \yii\db\ActiveRecord
             'name' => 'Name',
         ];
     }
+
+    /**
+     * eager load preview for Watch Model
+     * @return \yii\db\ActiveQuery
+     */
+    public function getImages()
+    {
+        return $this->hasMany(Images::className(), ['fk_preview' => 'id']); 
+    }
 }
