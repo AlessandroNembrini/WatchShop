@@ -4,20 +4,15 @@ namespace app\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
-use yii\web\UploadedFile;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Watch;
-use app\models\Images;
 
-class WatchController extends Controller
+class ApiController extends Controller
 {
-
-    public $enableCsrfValidation = false;
-    
     /**
      * {@inheritdoc}
      */
@@ -59,15 +54,20 @@ class WatchController extends Controller
             ],
         ];
     }
-   
 
-    /**
-     * Displays /watch/detail page.
+
+     /**
      *
      * @return string
      */
-    public function actionDetail()  
+    public function actionHeader()
     {
-        return $this->render('detail');
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        $model = new Watch();
+        $watch = $model->getPageModel(1); //Piaget Altiplano Ultimate 910P
+        
+        return $watch;
     }
+
 }

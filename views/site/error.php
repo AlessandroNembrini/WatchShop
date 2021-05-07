@@ -9,7 +9,10 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="container site-error mt-5" style="position: relative;"> 
+
+<div style="padding: 100px 0"></div>
+
+<div class="container site-error"> 
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -25,3 +28,5 @@ $this->title = $name;
     </p>
 
 </div>
+
+<div style="padding: 150px 0"></div>

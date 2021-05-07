@@ -1,17 +1,17 @@
 <template>
   <div class="watch__details">
-      <span class="watch__details__tag">Piaget Watches</span>
+      <span class="watch__details__tag">{{ watch.header.tag }}</span>
       <div class="p-2"></div>
-      <h2 class="watch__details__title">Piaget Altiplano<br/> Ultimate 910P</h2>
+      <h2 class="watch__details__title">{{ `${watch.brand} ${watch.model} ${watch.name}` }}</h2>
       <div class="p-1"></div>
       <div class="pl-5 watch__details">
-        <span class="watch__details__price">CHF 35'700.00</span>
-        <div class="p-2"></div>
-        <span class="watch__details__serialnumber">Watch G0A39111</span>
+        <span class="watch__details__price">CHF {{ watch.price }}</span>
+        <div class="p-2"></div> 
+        <span class="watch__details__serialnumber">{{ watch.serial_number}}</span>
       
        <div class="p-1"></div>
-      <p class="watch__details_description">The thinnest hand-wound mechanical watches<br> in the world.Manufacture Piaget 910P ultra-thin,<br> hand-wound mechanical movement</p>
-      <button-component class="mt-2" :href="a" :text="b"></button-component>
+      <p class="watch__details_description">{{ watch.header.description }}</p>
+      <button-component class="mt-2" :href="buttonLink" :text="buttonText"></button-component>
     </div>
 
     
@@ -22,13 +22,19 @@
 import ButtonComponent from "./ButtonComponent.vue";
 
 export default {
-    components: {
-      ButtonComponent
-    },
+
+  props: ['watch'],
+
+  components: {
+    ButtonComponent
+  },
+
+    
+
     data: () => {
       return{
-        a: "#",
-        b: "Add to shopping bag"
+        buttonLink: "#",
+        buttonText: "Add to shopping bag"
       }
     }
 }

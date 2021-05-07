@@ -12,9 +12,11 @@ use Yii;
  * @property string $description
  * @property string $headline
  * @property int $fk_preview
+ * @property file $eventImage
  */
 class Header extends \yii\db\ActiveRecord
 {
+
     /**
      * {@inheritdoc}
      */
@@ -32,11 +34,10 @@ class Header extends \yii\db\ActiveRecord
             [['tag', 'description', 'headline', 'fk_preview'], 'required'],
             [['fk_preview'], 'integer'],
             [['tag', 'headline'], 'string', 'max' => 35],
-            [['description'], 'string', 'max' => 250],
+            [['description'], 'string', 'max' => 250],          
+
         ];
     }
-
-
 
     /**
      * {@inheritdoc}
@@ -53,15 +54,13 @@ class Header extends \yii\db\ActiveRecord
     }
 
     /**
-     * eager load preview for Watch Model
+     * map relations
      * @return \yii\db\ActiveQuery
      */
     public function getPreview()
     {
-        return $this->hasOne(Preview::className(), ['id' => 'fk_preview'])->with('images'); 
+        return $this->hasOne(Preview::className(), ['id' => 'fk_preview'])->with('images'); // --> @Preview.php
     }
-
-    
 
 
 

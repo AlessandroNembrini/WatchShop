@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "axios": "^0.21.1",
     "lodash": "^4.17.15",
     "swiper": "^6.5.9",
     "vue": "^2.6.11",

@@ -1,62 +1,38 @@
 <template>
     <div class="row flex-wrap-reverse">
         <!-- Preview Thumbs -->
+        <!-- <h2>{{response}}</h2> -->
         <div class="d-flex flex-lg-column flex-sm-row col-lg-3 col-sm-12 justify-content-center align-items-center">
-            <img v-for="thumbnail in thumbnails" :key="thumbnail.id"
-             @click="changePreviewImg(thumbnail.id)" 
-             class="watch__preview__thumbnail border" 
-             :src="thumbnail.source" width="70" height="70" alt="thumbnail">
+            <div v-for="image in images" :key="image.id"
+             @click="changePreviewImg(image.id)" 
+             class="watch__preview__thumbnail" 
+             :style="{ backgroundImage: 'url(' + image.thumbnail_image + ')' }"></div>
         </div>
-        <!-- Preview -->
+        <!-- Preview -->    
         <div class="col-lg-9 col-sm-12">
              <div class="watch__preview" 
-             :style="{ backgroundImage: 'url(' + previewImg.source + ')' }"></div>
+             :style="{ backgroundImage: 'url(' + previewImage + ')' }" id="d1"></div>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    data: () => {
-        return{
-            thumbnails: [
-                {
-                    id: 1,
-                    source: "/design/images/Product_Thumbnail_1.png",
-                    previewImg: {
-                        id: 1,
-                        source: "/design/images/Product_Main.png"
-                    }
-                },
-                {
-                    id: 2,
-                    source: "/design/images/Product_Thumbnail_2.png",
-                    previewImg: {
-                        id: 2,
-                        source: "/design/images/Product_Main_2.png"
-                    }
-                },
-                {
-                    id: 3,
-                    source: "/design/images/Product_Thumbnail_3.png",
-                    previewImg: {
-                        id: 1,
-                        source: "/design/images/Product_Main_3.png"
-                    }
-                }
-            ],
 
-            previewImg: {
-                id: 1,
-                source: "/design/images/Product_Main.png"
-            }
+export default {
+
+    props: ['images', 'previewImage'],
+
+   
+
+    methods: {
+        changePreviewImg(imgId){
+            //get preview image for thumbnail
+            var thumbnailPreviewImg = this.images
+            .find(x => x.id === imgId).preview_image;
+            //change bg-img
+            document.getElementById('d1').style.backgroundImage="url("+ thumbnailPreviewImg +")";
         }
     },
-    methods: {
-        changePreviewImg(tId){
-            var thumbnailPreviewImg = this.thumbnails.find(x => x.id === tId).previewImg;
-            this.previewImg = thumbnailPreviewImg;
-        }
-    }
+
 }
 </script>

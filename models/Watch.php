@@ -61,7 +61,7 @@ class Watch extends \yii\db\ActiveRecord
      */
     public function getHeader()
     {
-        return $this->hasOne(Header::class, ['id' => 'fk_header'])->with('preview');
+        return $this->hasOne(Header::class, ['id' => 'fk_header'])->with('preview'); //-->@Header.php
     }
 
 
@@ -69,19 +69,11 @@ class Watch extends \yii\db\ActiveRecord
     {
         $watchHeaders = Watch::find()
         ->where(['watch.id' => $watchId])
-        ->with('header') //include heder relation
+        ->with('header') //include relations
         ->asArray() // stream array
         ->one(); // single
 
         return $watchHeaders;
     }
 
-    public function getWatchById($id)
-    {
-        $watch = Watch::find()
-        ->where(['id' => $id])
-        ->one();
-
-        return $watch;
-    }
 }

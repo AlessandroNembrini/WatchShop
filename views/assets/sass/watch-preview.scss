@@ -11,6 +11,10 @@
 
         &__thumbnail{
             margin: 10px 10px;
+            padding: 10%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
     }
@@ -33,14 +37,32 @@
         &__preview{
             padding-top: 100%;
 
-        }
-    
-       
-        }
+            &__thumbnail{
+                margin: 10px 10px;
+                padding: 30%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+        }    
+    }
         
     
     // Desktop large
     @media (min-width: 1200px) {
+        &__preview{
+            padding-top: 100%;
+
+            &__thumbnail{
+                margin: 10px 10px;
+                padding: 30%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+        }    
         
     }
 

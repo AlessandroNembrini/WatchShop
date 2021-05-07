@@ -9,6 +9,10 @@ import ProductSpecificationsComponent from './components/ProductSpecificationsCo
 import RelatedPiecesComponent from './components/RelatedPiecesComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 
+//api base url
+Vue.prototype.$api = 'http://thebrand-fullstack.ch.185-117-169-171.srv37.webpreview.ch/web/api'
+Vue.prototype.$api = 'http://localhost:8080/api'
+
 
 
 const app = new Vue({
@@ -22,12 +26,4 @@ const app = new Vue({
         RelatedPiecesComponent,
         FooterComponent
     },
-
-
-    data: () => {
-        return {
-            //response is loaded from main.php header script
-            response: response, 
-        }
-    }
 });

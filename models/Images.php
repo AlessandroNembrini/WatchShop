@@ -3,17 +3,20 @@
 namespace app\models;
 
 use Yii;
+use yii\web\UploadedFile;
+use yii\helpers\Url;
 
 /**
  * This is the model class for table "images".
  *
  * @property int $id
- * @property string $preview-image
- * @property string $thumbnail-image
+ * @property string $preview_image
+ * @property string $thumbnail_image
  * @property int $fk_preview
  */
 class Images extends \yii\db\ActiveRecord
 {
+
     /**
      * {@inheritdoc}
      */
@@ -28,9 +31,9 @@ class Images extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['preview-image', 'thumbnail-image', 'fk_preview'], 'required'],
+            [['preview_image', 'thumbnail_image', 'fk_preview'], 'required'],
             [['fk_preview'], 'integer'],
-            [['preview-image', 'thumbnail-image'], 'string', 'max' => 255],
+            [['preview_image', 'thumbnail_image'], 'string', 'max' => 255],
         ];
     }
 
@@ -46,6 +49,5 @@ class Images extends \yii\db\ActiveRecord
             'fk_preview' => 'Fk Preview',
         ];
     }
-    
 
 }
