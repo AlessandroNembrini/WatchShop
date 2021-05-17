@@ -36,7 +36,9 @@
     }
 
     &__item{
-        width:  100%;
+        &__inner{
+            width: 15rem;
+        }
     }
 
     &__icon{
@@ -135,6 +137,12 @@
 
         &__content{
             padding: 0 7rem;
+        }
+
+        &__item{
+            &__inner{
+                width: 25rem;
+            }
         }
 
         &__specifications{

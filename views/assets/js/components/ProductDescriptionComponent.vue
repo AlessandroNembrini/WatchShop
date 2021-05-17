@@ -24,19 +24,27 @@
 
                     <p class="productDescription__text2">The culmination of over half a century of virtuoso craftsmanship 
                     in the field of ultra-thin watchmaking, a domain in which Piaget reigns supreme, this luxury watch symbolises all the excellence.</p>
-                </div> 
+
+                    <button-component class="mt-5" :href="'#'" :text="'Add to Shopping Bag'"></button-component>
+                </div>
             </div>          
         </div>
     </div>
 </template>
 
 <script>
+import ButtonComponent from './ButtonComponent.vue'
+
 export default {
     data: () => {
         return{
             img: "/design/images/Product_Description_1.png",
             img2: "/design/images/Product_Description_2.png",
         }
+    },
+
+    components: {
+        ButtonComponent
     }
 }
 </script>

@@ -9,8 +9,8 @@
             <div class="my-5"></div>
             <div v-for="row in rows" :key="row.id"  class="d-flex justify-content-around px-4">
                 <!-- Atribute Rows -->
-                <div v-for="item in row.items" :key="item.id" class="productAttributes__item d-flex px-lg-5 px-0">
-                    <div class="d-flex w-100 border-bottom" >
+                <div v-for="item in row.items" :key="item.id" class="productAttributes__item__inner d-flex px-lg-5 px-0">
+                    <div class="productAttributes__item__inner d-flex border-bottom" >
                         <div class="d-flex py-3">
                         <div class="productAttributes__icon mr-3"  :style="{ backgroundImage: 'url(' + item.icon + ')' }">
                         </div>     

@@ -1,0 +1,29 @@
+.spacer1{
+    margin: 25rem;
+}
+
+
+    // BREAKPOINTS
+    // Mobile
+    @media (min-width: 576px) {
+     
+    }
+
+    // Tablets
+    @media (min-width: 768px) {
+        .spacer1{
+            margin: 25rem;
+        }
+      
+    }
+    // Desktop
+    @media (min-width: 992px) {
+        
+    }
+    // Desktop large
+    @media (min-width: 1200px) {
+        .spacer1{
+            padding: 5rem;
+        }
+             
+    }

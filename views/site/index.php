@@ -8,7 +8,7 @@ $this->title = 'The Brand - Watch Shop';
 
 <div class="container site-index">
     <div class="conatiner body-content">
-    <a class="btn btn-primary btn-lg text-white" href="/watch/detail" role="button">Go to details page</a>
+    <a class="btn btn-primary btn-lg text-white" href="/web/watch/detail" role="button">Go to details page</a>
     </div>
 </div>
 
