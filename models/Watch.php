@@ -61,7 +61,7 @@ class Watch extends \yii\db\ActiveRecord
      */
     public function getHeader()
     {
-        return $this->hasOne(Header::class, ['id' => 'fk_header'])->with('preview'); //-->@Header.php
+        return $this->hasOne(Header::class, ['id' => 'fk_header'])->with('images'); //-->@Header.php
     }
 
 
@@ -75,5 +75,6 @@ class Watch extends \yii\db\ActiveRecord
 
         return $watchHeaders;
     }
+    
 
 }

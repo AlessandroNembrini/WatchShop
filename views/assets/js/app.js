@@ -10,8 +10,8 @@ import RelatedPiecesComponent from './components/RelatedPiecesComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 
 //api base url
-Vue.prototype.$api = 'https://thebrand-fullstack.ch/web/api';
-//Vue.prototype.$api = 'http://localhost:8080/api'
+//Vue.prototype.$api = 'https://thebrand-fullstack.ch/web/api';
+Vue.prototype.$api = 'http://localhost:8080/api'
 
 const app = new Vue({
     el: '#app',

@@ -12,7 +12,7 @@ use yii\helpers\Url;
  * @property int $id
  * @property string $preview_image
  * @property string $thumbnail_image
- * @property int $fk_preview
+ * @property int $fk_header
  */
 class Images extends \yii\db\ActiveRecord
 {
@@ -31,8 +31,8 @@ class Images extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['preview_image', 'thumbnail_image', 'fk_preview'], 'required'],
-            [['fk_preview'], 'integer'],
+            [['preview_image', 'thumbnail_image'], 'required'],
+            [['fk_header'], 'integer'],
             [['preview_image', 'thumbnail_image'], 'string', 'max' => 255],
         ];
     }
@@ -46,7 +46,7 @@ class Images extends \yii\db\ActiveRecord
             'id' => 'ID',
             'preview-image' => 'Preview Image',
             'thumbnail-image' => 'Thumbnail Image',
-            'fk_preview' => 'Fk Preview',
+            'fk_header' => 'Fk Header',
         ];
     }
 

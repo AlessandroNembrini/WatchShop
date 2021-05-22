@@ -42,9 +42,9 @@ export default {
             //watch model with header
             this.watch = res.data; 
             //get image sources from thumbanil and preview for PreviewComponent
-            this.images = res.data.header.preview.images;
+            this.images = res.data.header.images;
             // set first image to preveiw imag, later we can add a flag isPreview
-            this.previewImg = res.data.header.preview.images[0].preview_image; 
+            this.previewImg = res.data.header.images[0].preview_image; 
         })
     }
 

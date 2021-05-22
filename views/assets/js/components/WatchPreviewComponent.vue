@@ -6,7 +6,7 @@
             <div v-for="image in images" :key="image.id"
              @click="changePreviewImg(image.id)" 
              class="watch__preview__thumbnail" 
-             :style="{ backgroundImage: 'url(' + image.thumbnail_image + ')' }"></div>
+             :style="{ backgroundImage: 'url(' + image.preview_image + ')' }"></div>
         </div>
         <!-- Preview -->    
         <div class="col-lg-9 col-sm-12">
@@ -27,10 +27,10 @@ export default {
     methods: {
         changePreviewImg(imgId){
             //get preview image for thumbnail
-            var thumbnailPreviewImg = this.images
+            var newPreviewImg = this.images
             .find(x => x.id === imgId).preview_image;
             //change bg-img
-            document.getElementById('d1').style.backgroundImage="url("+ thumbnailPreviewImg +")";
+            document.getElementById('d1').style.backgroundImage="url("+ newPreviewImg +")";
         }
     },
 
