@@ -70,4 +70,14 @@ class WatchController extends Controller
     {
         return $this->render('detail');
     }
+
+    /**
+     * Displays /watch/edit page.
+     *
+     * @return string
+     */
+    public function actionEdit()  
+    {
+        return $this->render('edit');
+    }
 }

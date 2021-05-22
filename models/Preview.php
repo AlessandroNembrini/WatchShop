@@ -43,7 +43,7 @@ class Preview extends \yii\db\ActiveRecord
     }
 
     /**
-     * eager load preview for Watch Model
+     * eager load images for Preview Model
      * @return \yii\db\ActiveQuery
      */
     public function getImages()

@@ -47,7 +47,7 @@ AppAsset::register($this);
         spaceBetween: 30,
         freeMode: true,
         breakpoints: {
-           // when window width is >= 320px
+           // when window width is <= 220px
            220: {
             slidesPerView: 1,
             spaceBetween: 20

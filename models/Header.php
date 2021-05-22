@@ -61,8 +61,5 @@ class Header extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Preview::className(), ['id' => 'fk_preview'])->with('images'); // --> @Preview.php
     }
-
-
-
    
 }

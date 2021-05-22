@@ -1,0 +1,1 @@
+a:1:{s:13:"60a91c65b5567";a:12:{s:3:"tag";s:13:"60a91c65b5567";s:3:"url";s:34:"http://localhost:8080/watch/detail";s:4:"ajax";i:0;s:6:"method";s:3:"GET";s:2:"ip";s:3:"::1";s:4:"time";d:1621695589.699289;s:10:"statusCode";i:404;s:8:"sqlCount";i:0;s:9:"mailCount";i:0;s:9:"mailFiles";a:0:{}s:10:"peakMemory";i:4805400;s:14:"processingTime";d:0.0817708969116211;}}
