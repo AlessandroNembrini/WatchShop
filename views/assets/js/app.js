@@ -8,6 +8,8 @@ import ProductDescriptionComponent from './components/ProductDescriptionComponen
 import ProductSpecificationsComponent from './components/ProductSpecificationsComponent.vue';
 import RelatedPiecesComponent from './components/RelatedPiecesComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import AjaxLoaderComponent from './components/AjaxLoaderComponent.vue';
+import axios from 'axios';
 
 //api base url
 //Vue.prototype.$api = 'https://thebrand-fullstack.ch/web/api';
@@ -22,6 +24,33 @@ const app = new Vue({
         ProductDescriptionComponent,
         ProductSpecificationsComponent,
         RelatedPiecesComponent,
-        FooterComponent
+        FooterComponent,
+        AjaxLoaderComponent,
     },
+
+    created() {
+        //Global Ajax Spinner
+        axios.interceptors.request.use((config) => {
+            // trigger 'loading=true' event here 
+           $("#detail-loading-indicator").show();
+            return config;
+        }, (error) => {
+            // trigger 'loading=false' event here
+            $("#detail-loading-indicator").hide();
+            return Promise.reject(error);
+        });
+
+        axios.interceptors.response.use((response) => {
+            // trigger 'loading=false' event here
+            setTimeout(function(){
+                $("#detail-loading-indicator").hide();
+           }, 800);//wait 2 seconds
+            
+            return response;
+        }, (error) => {
+            // trigger 'loading=false' event here
+            $("#detail-loading-indicator").hide();
+            return Promise.reject(error);
+        });
+    }
 });

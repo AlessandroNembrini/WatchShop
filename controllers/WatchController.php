@@ -12,6 +12,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Watch;
 use app\models\Images;
+use yii\web\NotFoundHttpException;
 
 class WatchController extends Controller
 {
@@ -62,12 +63,23 @@ class WatchController extends Controller
    
 
     /**
-     * Displays /watch/detail page.
+     * Displays /watch/detail/id page.
      *
      * @return string
      */
-    public function actionDetail()  
+    public function actionDetail($watchId)  
     {
+        //check if watch exist in db
+        $result = Watch::find()
+        ->where( [ 'id' => $watchId])
+        ->exists(); 
+
+        //if not exist return not found handled by site/error
+        if(!$result){
+            throw new NotFoundHttpException("This watch does not exist");
+        }
+
+        //render detail page, vue will get the param from the route
         return $this->render('detail');
     }
 

@@ -10,6 +10,8 @@ $this->title = 'The Brand - Watch Details';
 <div class="site-index">
     <div class="body-content mx-3">
 
+        <ajax-loader-component></ajax-loader-component>
+
         <section class="section1">
             <header-component></header-component> 
         </section>

@@ -36,8 +36,10 @@ export default {
     },
 
     mounted(){
+      let watchId = location.href.substring(location.href.lastIndexOf('/') + 1);
+
         // this end point get all data needed for this Component
-        axios.get(`${this.$api}/header`)
+        axios.get(`${this.$api}/header/${watchId}`)
         .then(res => { //await reult
             //watch model with header
             this.watch = res.data; 
@@ -46,7 +48,9 @@ export default {
             // set first image to preveiw imag, later we can add a flag isPreview
             this.previewImg = res.data.header.images[0].preview_image; 
         })
-    }
+    },
+
+    
 
 }
 

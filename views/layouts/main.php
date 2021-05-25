@@ -79,7 +79,6 @@ AppAsset::register($this);
         
       });
 
-     
     </script>
 </body>
 

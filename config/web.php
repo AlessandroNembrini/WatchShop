@@ -53,6 +53,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'watch/detail/<watchId:\d+>' => 'watch/detail',
+                'api/header/<watchId:\d+>' => 'api/header',
             ],
         ],
         

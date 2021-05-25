@@ -5,23 +5,22 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "header".
+ * This is the model class for table "description".
  *
  * @property int $id
  * @property string $tag
- * @property string $description
  * @property string $headline
- * 
+ * @property string $text1
+ * @property string $text2
  */
-class Header extends \yii\db\ActiveRecord
+class Description extends \yii\db\ActiveRecord
 {
-
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'header';
+        return 'description';
     }
 
     /**
@@ -30,10 +29,10 @@ class Header extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tag', 'description', 'headline'], 'required'],
-            [['tag', 'headline'], 'string', 'max' => 35],
-            [['description'], 'string', 'max' => 250],          
-
+            [['tag', 'headline', 'text1', 'text2'], 'required'],
+            [['tag'], 'string', 'max' => 25],
+            [['headline'], 'string', 'max' => 250],
+            [['text1', 'text2'], 'string', 'max' => 500],
         ];
     }
 
@@ -45,8 +44,9 @@ class Header extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'tag' => 'Tag',
-            'description' => 'Description',
             'headline' => 'Headline',
+            'text1' => 'Text1',
+            'text2' => 'Text2',
         ];
     }
 
@@ -56,7 +56,6 @@ class Header extends \yii\db\ActiveRecord
      */
     public function getImages()
     {
-        return $this->hasMany(Images::className(), ['fk_header' => 'id']); 
+        return $this->hasMany(Images::className(), ['fk_description' => 'id']); 
     }
-
 }

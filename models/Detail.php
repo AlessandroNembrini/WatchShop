@@ -5,23 +5,20 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "header".
+ * This is the model class for table "detail".
  *
  * @property int $id
  * @property string $tag
- * @property string $description
  * @property string $headline
- * 
  */
-class Header extends \yii\db\ActiveRecord
+class Detail extends \yii\db\ActiveRecord
 {
-
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'header';
+        return 'detail';
     }
 
     /**
@@ -30,10 +27,8 @@ class Header extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tag', 'description', 'headline'], 'required'],
-            [['tag', 'headline'], 'string', 'max' => 35],
-            [['description'], 'string', 'max' => 250],          
-
+            [['tag', 'headline'], 'required'],
+            [['tag', 'headline'], 'string', 'max' => 60],
         ];
     }
 
@@ -45,18 +40,29 @@ class Header extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'tag' => 'Tag',
-            'description' => 'Description',
             'headline' => 'Headline',
         ];
     }
 
-      /**
+
+     /**
      * map relations
      * @return \yii\db\ActiveQuery
      */
     public function getImages()
     {
-        return $this->hasMany(Images::className(), ['fk_header' => 'id']); 
+        return $this->hasMany(Images::className(), ['fk_detail' => 'id']); 
     }
+
+     /**
+     * map relations
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIcons()
+    {
+        return $this->hasMany(DetailIcons::className(), ['fk_detail' => 'id']); 
+    }
+
+
 
 }
