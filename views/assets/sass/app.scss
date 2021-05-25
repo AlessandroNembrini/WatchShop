@@ -25,6 +25,13 @@
 @import "footer.scss";
 
 
+.edit-detail-image{
+  padding: 5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 #detail-loading-indicator {
   position: fixed;
   height: 100vh;

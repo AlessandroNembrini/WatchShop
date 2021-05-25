@@ -19,6 +19,7 @@ use Yii;
  */
 class Watch extends \yii\db\ActiveRecord
 {
+
     /**
      * {@inheritdoc}
      */
@@ -33,7 +34,7 @@ class Watch extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['serial_number', 'brand', 'model', 'name', 'price', 'fk_header', 'fk_detail', 'fk_description', 'fk_specification'], 'required'],
+            [['serial_number', 'brand', 'model', 'name', 'price', 'fk_header', 'fk_detail', 'fk_description', 'fk_specification'], 'required', 'message' => 'Feld ist pflicht'],
             [['fk_header', 'fk_detail', 'fk_description'], 'integer'],
             [['serial_number'], 'string', 'max' => 20],
             [['brand', 'model', 'name'], 'string', 'max' => 35],
@@ -48,11 +49,11 @@ class Watch extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'serial_number' => 'Serial Number',
-            'brand' => 'Brand',
-            'model' => 'Model',
+            'serial_number' => 'Serien Nummer',
+            'brand' => 'Marke',
+            'model' => 'Modell',
             'name' => 'Name',
-            'price' => 'Price',
+            'price' => 'Preis',
             'fk_header' => 'Fk Header',
             'fk_detail' => 'Fk Detail',
             'fk_description' => 'Fk Description',

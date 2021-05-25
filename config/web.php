@@ -54,6 +54,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'watch/detail/<watchId:\d+>' => 'watch/detail',
+                'watch/edit/<watchId:\d+>' => 'watch/edit',
                 'api/header/<watchId:\d+>' => 'api/header',
             ],
         ],

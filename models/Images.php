@@ -11,11 +11,16 @@ use yii\helpers\Url;
  *
  * @property int $id
  * @property string $preview_image
- * @property string $thumbnail_image
  * @property int $fk_header
  */
 class Images extends \yii\db\ActiveRecord
 {
+
+     /**
+      * hold uploaded image
+     * @var UploadedFile
+     */
+    public $imageFile;
 
     /**
      * {@inheritdoc}
@@ -31,9 +36,10 @@ class Images extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['preview_image', 'thumbnail_image'], 'required'],
+            [['preview_image'], 'required'],
             [['fk_header'], 'integer'],
-            [['preview_image', 'thumbnail_image'], 'string', 'max' => 255],
+            [['preview_image'], 'string', 'max' => 255],
+            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -44,10 +50,21 @@ class Images extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'preview-image' => 'Preview Image',
-            'thumbnail-image' => 'Thumbnail Image',
+            'preview_image' => 'Preview Image',
+            //'thumbnail-image' => 'Thumbnail Image',
             'fk_header' => 'Fk Header',
+            'imageFile' => 'Bild',
         ];
+    }
+
+    public function upload()
+    {
+        //if ($this->validate()) {
+            $this->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+            return true;
+       // } else {
+           // return false;
+        //}
     }
 
 }

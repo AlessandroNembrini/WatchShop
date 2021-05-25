@@ -8,11 +8,11 @@ use yii\web\UploadedFile;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
+use app\models\UploadForm;
 use app\models\Watch;
 use app\models\Images;
 use yii\web\NotFoundHttpException;
+use yii\web\BadRequestHttpException;
 
 class WatchController extends Controller
 {
@@ -63,7 +63,7 @@ class WatchController extends Controller
    
 
     /**
-     * Displays /watch/detail/id page.
+     * Displays /watch/detail/:watchId page.
      *
      * @return string
      */
@@ -74,22 +74,49 @@ class WatchController extends Controller
         ->where( [ 'id' => $watchId])
         ->exists(); 
 
-        //if not exist return not found handled by site/error
+        //if not exist return 404 handled by site/error
         if(!$result){
             throw new NotFoundHttpException("This watch does not exist");
         }
 
-        //render detail page, vue will get the param from the route
+        //render detail page
         return $this->render('detail');
     }
 
     /**
-     * Displays /watch/edit page.
+     * Displays /watch/edit/:watchId page.
      *
      * @return string
      */
-    public function actionEdit()  
-    {
-        return $this->render('edit');
+    public function actionEdit($watchId)  
+    {   
+         
+         $file = new Images();
+
+        if (Yii::$app->request->isPost) {
+            $model = new Images();
+            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            if ($model->upload()) {
+                // file is uploaded successfully
+                $image = new Images();
+                $image->fk_header = 1;
+                $image->preview_image = '/'.'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
+                $image->save();
+                print_r($image->errors);
+
+            }else{
+                //return 400
+                throw new BadRequestHttpException("Error while uploading file");
+            }
+        }
+
+        //Load Data
+        $watch = Watch::find()
+        ->where( [ 'id' => $watchId])->with('header')->one();
+
+
+        //Pass model instance to active form in view
+        return $this->render('edit', ['watch' => $watch, 'file' => $file]);
     }
+
 }

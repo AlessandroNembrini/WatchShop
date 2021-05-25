@@ -30,7 +30,7 @@ class Header extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tag', 'description', 'headline'], 'required'],
+            [['tag', 'description', 'headline'], 'required', 'message' => 'Feld ist pflicht'],
             [['tag', 'headline'], 'string', 'max' => 35],
             [['description'], 'string', 'max' => 250],          
 
