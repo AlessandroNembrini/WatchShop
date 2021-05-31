@@ -7,6 +7,8 @@ use yii\base\InvalidConfigException;
 //https://www.yiiframework.com/wiki/747/write-use-a-custom-component-in-yii2-0
 class Functions extends Component 
 {
+
+    //https://www.php.net/manual/de/function.com-create-guid.php
     public function guidv4()
     {
         if (function_exists('com_create_guid') === true)

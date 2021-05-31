@@ -29,7 +29,7 @@ const app = new Vue({
     },
 
     created() {
-        //Global Ajax Spinner
+        //Global Ajax Loader
         axios.interceptors.request.use((config) => {
             // trigger 'loading=true' event here 
            $("#detail-loading-indicator").show();
