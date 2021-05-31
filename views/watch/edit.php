@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
     <!-- Update Watch/Header -->
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'class' => 'mt-5']]) ?>    
     <div class="shadow-lg p-3">
-        <h4 class="mb-3">Attribute</h4>
+        <h4 class=" mb-3">Attribute</h4>
         <?= $form->field($watch->header, 'tag') ?>  
         <?= $form->field($watch, 'brand') ?>
         <?= $form->field($watch, 'model') ?>
@@ -29,6 +29,7 @@ use yii\widgets\ActiveForm;
         <?= $form->field($image, 'fk_header')->hiddenInput(['value'=> $watch->header->id])->label(false) ?>
     </div>   
         <button class="btn btn-primary btn-block mt-5">Update</button>
+        <div class="myButton mt-2"><a href="#" class="myButton__ancor">Add to shopping bag</a></div>
     <?php ActiveForm::end() ?>
     </div>
 </div>

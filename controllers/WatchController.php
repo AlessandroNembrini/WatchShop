@@ -70,41 +70,40 @@ class WatchController extends Controller
     {   
         //Load watch/header model
         $watch = Watch::find()
-        ->where( [ 'id' => $watchId])->with('header')->one();
+        ->where([ 'id' => $watchId])->with('header')->one();
 
         $image = new Images();
        
-        if($image === null){
+        if(empty($watch)){
             throw new NotFoundHttpException("This watch does not exist");
+        }else{
+             //Upload Imagefile
+            if (Yii::$app->request->isPost) {   
+                $image->imageFile = UploadedFile::getInstance($image, 'imageFile');
+                //Check if a file is uploaded 
+                //https://stackoverflow.com/questions/25237661/skip-on-empty-not-working-in-yii2-file-upload
+                if(!empty($image->imageFile) && $image->imageFile->size !== 0){
+                    if ($image->upload()) {
+                        //file is uploaded successfully
+                        $image->fk_header = $watch->header->id;
+                    // $guid = guidv4();
+                        $image->preview_image = '/'.'uploads/' . $image->imageFile->baseName . '.' . $image->imageFile->extension;
+                        $image->save(false);  
+                        //refresh page     
+                        return $this->refresh();              
+                    }else{
+                        //return 400
+                        throw new BadRequestHttpException("Error while uploading file -> {print_r($image->errors)}");
+                    }    
+                }
+                //Load model data from post-obj
+                $watch->load(Yii::$app->request->post());
+                $watch->header->load(Yii::$app->request->post());
+                //save changes
+                $watch->save();  
+                $watch->header->save();       
+            }      
         }
-         
-        //Upload Imagefile
-        if (Yii::$app->request->isPost) {   
-            $image->imageFile = UploadedFile::getInstance($image, 'imageFile');
-            //Check if a file is uploaded 
-            //https://stackoverflow.com/questions/25237661/skip-on-empty-not-working-in-yii2-file-upload
-            if(!empty($image->imageFile) && $image->imageFile->size !== 0){
-                if ($image->upload()) {
-                    //file is uploaded successfully
-                    $image->fk_header = $watch->header->id;
-                   // $guid = guidv4();
-                    $image->preview_image = '/'.'uploads/' . $image->imageFile->baseName . '.' . $image->imageFile->extension;
-                    $image->save(false);  
-                    //refresh page     
-                    return $this->refresh();              
-                }else{
-                    //return 400
-                    throw new BadRequestHttpException("Error while uploading file -> {print_r($image->errors)}");
-                }    
-            }
-            //Load model data from post-obj
-            $watch->load(Yii::$app->request->post());
-            $watch->header->load(Yii::$app->request->post());
-            //save changes
-            $watch->save();  
-            $watch->header->save();       
-        }
-       
         //Pass model instance to active form in view
         return $this->render('edit', ['watch' => $watch, 'file' => $image]);
          
