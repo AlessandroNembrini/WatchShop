@@ -45,7 +45,7 @@ class Header extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'tag' => 'Tag',
-            'description' => 'Description',
+            'description' => 'Beschreibung',
             'headline' => 'Headline',
         ];
     }

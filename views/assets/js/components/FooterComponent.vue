@@ -1,5 +1,5 @@
 <template>
-    <footer class="p-0 p-sm-5">
+    <footer class="p-0 p-sm-5 shadow-lg">
         <div class="container pt-5">
               <div class="row flex-wrap-reverse justify-content-center">
                   <div class="d-flex flex-column col-lg-3 col-sm-12">

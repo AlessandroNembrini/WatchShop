@@ -11,41 +11,17 @@ use yii\filters\VerbFilter;
 use app\models\UploadForm;
 use app\models\Watch;
 use app\models\Images;
+use app\models\Header;
 use yii\web\NotFoundHttpException;
 use yii\web\BadRequestHttpException;
 
 class WatchController extends Controller
 {
 
-    public $enableCsrfValidation = false;
-    
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
+    public $enableCsrfValidation = true;
 
     /**
+     * Error handler
      * {@inheritdoc}
      */
     public function actions()
@@ -63,7 +39,7 @@ class WatchController extends Controller
    
 
     /**
-     * Displays /watch/detail/:watchId page.
+     * Displays /watch/detail/:watchId page
      *
      * @return string
      */
@@ -80,43 +56,57 @@ class WatchController extends Controller
         }
 
         //render detail page
+        //data is loaded over ajax @vue-component
         return $this->render('detail');
     }
 
     /**
-     * Displays /watch/edit/:watchId page.
+     * Displays /watch/edit/:watchId page and
+     * handle Update and FileUpload
      *
      * @return string
      */
     public function actionEdit($watchId)  
     {   
-         
-         $file = new Images();
-
-        if (Yii::$app->request->isPost) {
-            $model = new Images();
-            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
-            if ($model->upload()) {
-                // file is uploaded successfully
-                $image = new Images();
-                $image->fk_header = 1;
-                $image->preview_image = '/'.'uploads/' . $model->imageFile->baseName . '.' . $model->imageFile->extension;
-                $image->save();
-                print_r($image->errors);
-
-            }else{
-                //return 400
-                throw new BadRequestHttpException("Error while uploading file");
-            }
-        }
-
-        //Load Data
+        //Load watch/header model
         $watch = Watch::find()
         ->where( [ 'id' => $watchId])->with('header')->one();
 
-
+        $image = new Images();
+       
+        if($image === null){
+            throw new NotFoundHttpException("This watch does not exist");
+        }
+         
+        //Upload Imagefile
+        if (Yii::$app->request->isPost) {   
+            $image->imageFile = UploadedFile::getInstance($image, 'imageFile');
+            //Check if a file is uploaded 
+            //https://stackoverflow.com/questions/25237661/skip-on-empty-not-working-in-yii2-file-upload
+            if(!empty($image->imageFile) && $image->imageFile->size !== 0){
+                if ($image->upload()) {
+                    //file is uploaded successfully
+                    $image->fk_header = $watch->header->id;
+                   // $guid = guidv4();
+                    $image->preview_image = '/'.'uploads/' . $image->imageFile->baseName . '.' . $image->imageFile->extension;
+                    $image->save(false);  
+                    //refresh page     
+                    return $this->refresh();              
+                }else{
+                    //return 400
+                    throw new BadRequestHttpException("Error while uploading file -> {print_r($image->errors)}");
+                }    
+            }
+            //Load model data from post-obj
+            $watch->load(Yii::$app->request->post());
+            $watch->header->load(Yii::$app->request->post());
+            //save changes
+            $watch->save();  
+            $watch->header->save();       
+        }
+       
         //Pass model instance to active form in view
-        return $this->render('edit', ['watch' => $watch, 'file' => $file]);
-    }
-
+        return $this->render('edit', ['watch' => $watch, 'file' => $image]);
+         
+     }
 }

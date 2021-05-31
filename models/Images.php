@@ -36,9 +36,9 @@ class Images extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['preview_image'], 'required'],
-            [['fk_header'], 'integer'],
-            [['preview_image'], 'string', 'max' => 255],
+           // [['preview_image'], 'required'],
+          // [['fk_header'], 'integer'],
+           // [['preview_image'], 'string', 'max' => 255],
             [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }
@@ -58,12 +58,12 @@ class Images extends \yii\db\ActiveRecord
 
     public function upload()
     {
-        //if ($this->validate()) {
+       if ($this->validate()) {
+            //$this->imageFile->saveAs(Yii::getAlias('@webroot').'/uploads/'.$this->imageFile->name);
             $this->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
             return true;
-       // } else {
-           // return false;
-        //}
+     } else {
+          return false;
+      }
     }
-
 }

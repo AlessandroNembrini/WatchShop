@@ -20,20 +20,18 @@ class ApiController extends Controller
         //get request obj
         $request = Yii::$app->request;
         //check if methode is get
-       // if($request->isGet){
-            //set response to json
+       if($request->isGet){
             Yii::$app->response->format = Response::FORMAT_JSON;
             //get model for header component
             $model = new Watch();
             $watch = $model->getHeaderModel($watchId); //Piaget Altiplano Ultimate 910P           
             //return model
             return $watch;
-       // }
-         //Throw exception for not allowed request type
-       // else
-       // {   //Error handler will render error page...
-           // throw new yii\web\BadRequestHttpException;
-        //}     
+       }
+       else
+        {   //Error handler will render error page...
+           throw new yii\web\BadRequestHttpException;
+        }     
     }
     
 
@@ -47,18 +45,14 @@ class ApiController extends Controller
          $request = Yii::$app->request;
          //check if methode is get
          if($request->isGet){
-             //set response to json
              Yii::$app->response->format = Response::FORMAT_JSON;
-             //get model for header component
              $model = new Watch();
              $watch = $model->getDetailModel(1); //Piaget Altiplano Ultimate 910P   
-             //return model
              return $watch;
          }
-          //Throw exception for not allowed request type
          else
-         {   //Error handler will render error page...
-             throw new yii\web\BadRequestHttpException;
+         {   
+            throw new yii\web\BadRequestHttpException("Not allowed http methode");
          }     
     }
 
@@ -68,22 +62,17 @@ class ApiController extends Controller
      */
     public function actionDescription()
     {
-         //get request obj
          $request = Yii::$app->request;
-         //check if methode is get
          if($request->isGet){
-             //set response to json
              Yii::$app->response->format = Response::FORMAT_JSON;
-             //get model for header component
              $model = new Watch();
              $watch = $model->getDescriptionModel(1); //Piaget Altiplano Ultimate 910P
-             //return model
              return $watch;
          }
-          //Throw exception for not allowed request type
          else
-         {   //Error handler will render error page...
-             throw new yii\web\BadRequestHttpException;
+         {   
+            //Error handler will render error page...
+            throw new yii\web\BadRequestHttpException;
          }     
     }
 
@@ -93,22 +82,16 @@ class ApiController extends Controller
      */
     public function actionSpecification()
     {
-         //get request obj
          $request = Yii::$app->request;
-         //check if methode is get
          if($request->isGet){
-             //set response to json
              Yii::$app->response->format = Response::FORMAT_JSON;
-             //get model for header component
              $model = new Watch();
              $watch = $model->getSpecificationModel(1); //Piaget Altiplano Ultimate 910P
-             //return model
              return $watch;
          }
-          //Throw exception for not allowed request type
          else
-         {   //Error handler will render error page...
-             throw new yii\web\BadRequestHttpException;
+         {  
+            throw new yii\web\BadRequestHttpException;
          }     
     }
 

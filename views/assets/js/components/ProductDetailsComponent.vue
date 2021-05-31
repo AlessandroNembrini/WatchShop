@@ -2,7 +2,6 @@
     <div class="d-flex justify-content-md-between justify-content-center flex-wrap">
         <!-- Atributes and Title -->
         <div class="productAttributes__content">
-            <div></div>
             <span class="watch__details__tag">Product Details</span><br>
             <div class="my-3"></div>
             <h4 class="productAttributes_title">Piaget Altiplano Ultimate 910P</h4>
