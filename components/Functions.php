@@ -4,6 +4,7 @@ use Yii;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 
+//https://www.yiiframework.com/wiki/747/write-use-a-custom-component-in-yii2-0
 class Functions extends Component 
 {
     public function guidv4()

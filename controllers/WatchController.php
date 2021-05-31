@@ -93,7 +93,8 @@ class WatchController extends Controller
                         return $this->refresh();              
                     }else{
                         //return 400
-                        throw new BadRequestHttpException("Error while uploading file -> {print_r($image->errors)}");
+                        print_r($image->errors);
+                        throw new BadRequestHttpException("Error while uploading file");
                     }    
                 }
                 //Load model data from post-obj

@@ -1,13 +1,14 @@
 <?php
-use yii\widgets\ActiveForm;
+    use yii\widgets\ActiveForm;
+    use yii\helpers\Url;
 ?>
 
 <div style="padding: 50px 0;"></div>
 <div class="container mt-5">
-    <h1 class="mt-5">Header - <?= $watch->brand . " " . $watch->model . " " . $watch->name . ' ('.$watch->id.')'?></h1>
+    <h1 class="mt-5">Edit Header - <?= $watch->brand . " " . $watch->model . " " . $watch->name . ' ('.$watch->id.')'?></h1>
     <!-- Update Watch/Header -->
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'class' => 'mt-5']]) ?>    
-    <div class="shadow-lg p-3">
+    <div class="shadow-lg p-4 rounded">
         <h4 class=" mb-3">Attribute</h4>
         <?= $form->field($watch->header, 'tag') ?>  
         <?= $form->field($watch, 'brand') ?>
@@ -17,7 +18,7 @@ use yii\widgets\ActiveForm;
         <?= $form->field($watch, 'serial_number') ?>
         <?= $form->field($watch->header, 'description')->textarea(['rows' => '3'])  ?>
     </div>
-    <div class="shadow-lg p-3 mt-5">
+    <div class="shadow-lg p-4 mt-5 rounded">
     <h4>Bilder</h4>
         <div class="d-inline-flex wrap container p-0 mt-3">
             <?php foreach($watch->header->images as $image):?>
@@ -28,8 +29,9 @@ use yii\widgets\ActiveForm;
         <?= $form->field($image, 'imageFile')->fileInput(['id' => 'fileInput'])->label("Weiteres Bild hinzufügen") ?>  
         <?= $form->field($image, 'fk_header')->hiddenInput(['value'=> $watch->header->id])->label(false) ?>
     </div>   
-        <button class="btn btn-primary btn-block mt-5">Update</button>
+        <button class="btn btn-success btn-block mt-5">Update</button>
     <?php ActiveForm::end() ?>
+    <a href="<?= Url::to(['watch/detail', 'watchId' => $watch->id]) ?>" class="btn btn-primary btn-block mt-5 text-white">Gehe zu details</a>
     </div>
 </div>
 
