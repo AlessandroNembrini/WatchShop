@@ -10133,6 +10133,7 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .watch {

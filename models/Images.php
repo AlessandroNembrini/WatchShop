@@ -51,7 +51,6 @@ class Images extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'preview_image' => 'Preview Image',
-            //'thumbnail-image' => 'Thumbnail Image',
             'fk_header' => 'Fk Header',
             'imageFile' => 'Bild',
         ];

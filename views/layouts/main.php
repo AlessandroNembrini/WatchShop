@@ -19,6 +19,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5.9.2/dist/dropzone.css">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -39,6 +40,7 @@ AppAsset::register($this);
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/dropzone@5.9.2/dist/dropzone.js"></script>
 
       <!-- Initialize Swiper -->
       <script>
@@ -78,6 +80,7 @@ AppAsset::register($this);
         },
         
       });
+      //var myDropzone = new Dropzone("div#myId", { url: "/file/post"});
 
     </script>
 </body>

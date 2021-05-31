@@ -21,8 +21,8 @@ use yii\widgets\ActiveForm;
                 <div class="edit-detail-image mr-5 thumbnail" style="background-image: url(<?= $image->preview_image ?>)"></div>
             <?php endforeach; ?>
         </div>
-
-        <?= $form->field($file, 'imageFile')->fileInput() ?>  
+        
+        <?= $form->field($file, 'imageFile')->fileInput(['class' => 'dropzone', 'id' => 'myId']) ?>  
         <?= $form->field($file, 'fk_header')->hiddenInput(['value'=> $watch->header->id])->label(false) ?>
 
         <button class="btn btn-primary btn-block">Update</button>
