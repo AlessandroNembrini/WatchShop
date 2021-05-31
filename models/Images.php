@@ -56,11 +56,11 @@ class Images extends \yii\db\ActiveRecord
         ];
     }
 
-    public function upload()
+    public function upload($guid)
     {
        if ($this->validate()) {
-            //$this->imageFile->saveAs(Yii::getAlias('@webroot').'/uploads/'.$this->imageFile->name);
-            $this->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+            $this->imageFile->saveAs('uploads/' . $guid . '_' .$this->imageFile->baseName . '.' . $this->imageFile->extension);
+             //$this->imageFile->saveAs(Yii::getAlias('@webroot').'/uploads/'.$this->imageFile->name);
             return true;
      } else {
           return false;

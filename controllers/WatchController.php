@@ -80,14 +80,14 @@ class WatchController extends Controller
              //Upload Imagefile
             if (Yii::$app->request->isPost) {   
                 $image->imageFile = UploadedFile::getInstance($image, 'imageFile');
-                //Check if a file is uploaded 
-                //https://stackoverflow.com/questions/25237661/skip-on-empty-not-working-in-yii2-file-upload
+                //Check if a file is uploaded https://stackoverflow.com/questions/25237661/skip-on-empty-not-working-in-yii2-file-upload
                 if(!empty($image->imageFile) && $image->imageFile->size !== 0){
-                    if ($image->upload()) {
+                    //create guid @(components/functions)
+                    $guid = Yii::$app->functions->guidv4();
+                    if ($image->upload($guid)) {
                         //file is uploaded successfully
                         $image->fk_header = $watch->header->id;
-                    // $guid = guidv4();
-                        $image->preview_image = '/'.'uploads/' . $image->imageFile->baseName . '.' . $image->imageFile->extension;
+                        $image->preview_image = '/'.'uploads/' . $guid . '_'. $image->imageFile->baseName . '.' . $image->imageFile->extension;
                         $image->save(false);  
                         //refresh page     
                         return $this->refresh();              

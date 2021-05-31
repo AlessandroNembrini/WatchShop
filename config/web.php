@@ -13,6 +13,9 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'functions' => [
+            'class' => 'app\components\Functions',
+        ],
         'telegram' => [
             'class' => 'aki\telegram\Telegram',
             'botToken' => '366300521:AAHNuvVnTEU8zHKglJmLX8QYjAO0ofJkanQ',

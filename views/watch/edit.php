@@ -29,7 +29,6 @@ use yii\widgets\ActiveForm;
         <?= $form->field($image, 'fk_header')->hiddenInput(['value'=> $watch->header->id])->label(false) ?>
     </div>   
         <button class="btn btn-primary btn-block mt-5">Update</button>
-        <div class="myButton mt-2"><a href="#" class="myButton__ancor">Add to shopping bag</a></div>
     <?php ActiveForm::end() ?>
     </div>
 </div>
