@@ -1,5 +1,5 @@
 # The Brand - Fullstack
-
+PHP - Version: 7.1.33
 ## Usage
 
 Local Development Server
@@ -9,11 +9,12 @@ If you have PHP installed locally and you would like to use PHP's built-in devel
 php yii serve
 ```
 
-Local Development Server
+Database
 ----- 
 Please make sure that the database was created on the localhost with the name 'thebranddb'
 (U need the 'thebranddb_v2.0.sql' script for this)
 
+## Development
 Compile SCSS
 ```bash
 sass --watch views/assets/sass/app.scss web/css/site.css
