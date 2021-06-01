@@ -15,6 +15,16 @@ Please make sure that the database was created on the localhost with the name 't
 (U need the 'thebranddb_v2.0.sql' script for this)
 
 ## Development
+Load Frontend depandencies
+```bash
+npm install
+```
+
+Load Backend depandencies
+```bash
+composer update
+```
+
 Compile SCSS
 ```bash
 sass --watch views/assets/sass/app.scss web/css/site.css
